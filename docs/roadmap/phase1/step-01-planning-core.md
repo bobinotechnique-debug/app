@@ -1,5 +1,7 @@
 # Phase 1 - Step 01: Planning Core
 
+Status: Approved — planning contract validated and recorded.
+
 ## Purpose
 Document the Phase 1 planning contract before any implementation. This step is the authoritative precursor for all subsequent Phase 1 actions and must be completed before design or development work begins.
 
@@ -33,11 +35,13 @@ Planning artifacts are the single source of truth for Phase 1. Specifications, U
 - Approved Phase 1 roadmap index entry referencing this step.
 - This planning contract capturing goals, non-goals, domain entities, and invariants.
 - Recorded stop conditions that halt backend, frontend, or ops changes until planning is approved.
+- Validation checklist and self-audit guidance to unblock downstream specs, UX, and API work once approved.
 
 ## Traceability Requirements
 - Every Phase 1 specification, UX artifact, or API contract must cite this step identifier before work begins.
 - New work items must demonstrate alignment to the planning invariant and domain entity definitions above.
 - Any deviation requires an explicit amendment proposal linked to this document.
+- Roadmap and documentation indexes must reference this step as the canonical planning source for Phase 1 artifacts.
 
 ## Acceptance Criteria
 - Goals and non-goals are documented and distinguish planning-only scope.
@@ -49,6 +53,14 @@ Planning artifacts are the single source of truth for Phase 1. Specifications, U
 - Planning reviewers verify that goals, non-goals, and entity definitions align with organizational and security boundaries.
 - Documentation owners confirm roadmap and index updates so that downstream teams can reference this step.
 - Work proceeds only after validation is recorded and communicated to dependent teams.
+- Approval must cite the readiness audit update that confirms stop conditions are satisfied.
+- Validation was recorded in the Phase 1 implementation readiness audit to unblock downstream specification drafting.
+
+## Self-Audit (Step Mode)
+- Roadmap linkage: Phase 1 Step 01 (Planning Core) referenced from roadmap/INDEX.md and docs/roadmap/phase1/INDEX.md.
+- Index coverage: roadmap and docs/roadmap entries updated to signal planning approval.
+- Stop conditions: backend, frontend, and ops work remain blocked until planning approval is recorded and downstream specs, UX, and API contracts are drafted.
+- Change logging: changelog entry added to capture Phase 1 planning activation and audit updates.
 
 ## Stop Conditions
 - Missing or unapproved planning documents for Phase 1.
