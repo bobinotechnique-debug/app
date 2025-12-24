@@ -45,3 +45,29 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
   - UX surfaces restrict actions to planning-only scopes with explicit forbidden behaviors.
   - Invariants and forbidden states align with Phase 1 domain boundaries and planning source-of-truth records.
   - Dependency declaration binds downstream UX, API, and implementation work to the approved contracts.
+
+### Step 04 - API Planning Contracts
+- [Step 04 - API Planning Contracts](../api/phase1/step-04-api-planning-contracts.md)
+- Status: Approved
+- Purpose: Establish the planning CRUD API contract for organization, project, mission, assignment, and collaborator resources under Phase 1 boundaries.
+- Deliverables:
+  - Versioned Phase 1 base path and CRUD endpoints with schemas and error contract.
+  - Tenancy and immutability rules aligned to planning invariants and UX needs.
+  - Idempotency, pagination, sorting, and filtering conventions for Phase 1.
+- Acceptance:
+  - Endpoints respect organization security boundary and immutable relationships.
+  - Error contract standardized across resources.
+  - No execution, financial, or operational concerns introduced.
+
+### Step 05 - API Examples and Test Matrix
+- [Step 05 - API Examples and Test Matrix](../api/phase1/step-05-api-examples-and-test-matrix.md)
+- Status: Approved
+- Purpose: Provide request/response examples and a validation-focused test matrix that operationalize Step 04 without changing scope.
+- Deliverables:
+  - Locked decisions for validation codes, archive mechanism, filters, cross-org behavior, and idempotency scope.
+  - Endpoint examples for happy paths and key error cases aligned to the Step 04 error contract.
+  - Minimal API contract test matrix covering validation, tenancy isolation, immutability, archive rules, and idempotency.
+- Acceptance:
+  - Examples and tests map directly to Step 04 endpoints and schemas.
+  - Decisions resolve Step 04 ambiguities without expanding features.
+  - Documentation remains planning-only and Phase 1 scoped.

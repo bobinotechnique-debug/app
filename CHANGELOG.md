@@ -4,6 +4,7 @@ All notable changes are tracked here. Phase 0 entries must reference roadmap ste
 
 ## [Unreleased]
 ### Added
+- Phase 1 Step 05 API examples and test matrix approved and indexed for Phase 1 planning scope in [docs/api/phase1/step-05-api-examples-and-test-matrix.md](docs/api/phase1/step-05-api-examples-and-test-matrix.md).
 - Phase 1 Step 04 API planning contracts recorded in [docs/api/phase1/step-04-api-planning-contracts.md](docs/api/phase1/step-04-api-planning-contracts.md) and indexed for Phase 1 planning scope.
 - Phase 0 scaffolding per [roadmap/phase-0/step-000](roadmap/phase-0/step-000.md): established repository structure, initial indexes, and guard placeholders.
 - Placeholder PowerShell scripts, guard notes, and workflow directory tracked for Phase 0 validation.
