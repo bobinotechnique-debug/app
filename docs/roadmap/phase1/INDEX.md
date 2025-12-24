@@ -32,3 +32,16 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
   - Boundaries and invariants align with and extend Step 01 without introducing implementation detail.
   - Forbidden states and deferred concerns explicitly block out-of-scope behaviors.
   - Dependency declaration recorded to bind UX, API, database, and backend work to this specification.
+
+### Step 03 - UX Surface Contracts
+- [Step 03 - UX Surface Contracts](../ux/phase1/step-03-ux-surfaces.md)
+- Status: Approved
+- Purpose: Define authoritative planning-only UX surfaces that present and edit planning artifacts without implying execution, finance, or analytics behaviors.
+- Deliverables:
+  - UX surface contracts for organization, project, mission, assignment, and collaborator planning views.
+  - Cross-surface invariants restated as UX constraints aligned to Phase 1 Steps 01 and 02.
+  - Forbidden UX states and deferred concerns ensuring no execution, notification, or financial leakage in Phase 1.
+- Acceptance:
+  - UX surfaces restrict actions to planning-only scopes with explicit forbidden behaviors.
+  - Invariants and forbidden states align with Phase 1 domain boundaries and planning source-of-truth records.
+  - Dependency declaration binds downstream UX, API, and implementation work to the approved contracts.
