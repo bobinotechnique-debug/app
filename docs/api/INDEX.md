@@ -7,3 +7,4 @@ Phase 0 focuses on scaffolding. Record any API surface sketches or contracts her
 - [Step 05: API Examples and Test Matrix](phase1/step-05-api-examples-and-test-matrix.md)
 - [Step 06: API Validation and Conflict Detection](phase1/step-06-api-validation-and-conflict-detection.md)
 - [Step 07: Planning State Transitions](phase1/step-07-planning-state-transitions.md)
+- [Step 08: Planning Snapshots and Audit Trails](phase1/step-08-planning-snapshots-and-audit-trails.md)

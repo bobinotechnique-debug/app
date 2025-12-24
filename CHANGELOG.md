@@ -4,6 +4,7 @@ All notable changes are tracked here. Phase 0 entries must reference roadmap ste
 
 ## [Unreleased]
 ### Added
+- Phase 1 Step 08 planning snapshots and audit trails recorded in [docs/api/phase1/step-08-planning-snapshots-and-audit-trails.md](docs/api/phase1/step-08-planning-snapshots-and-audit-trails.md) with roadmap, audit readiness, and API index updates locking deterministic, planning-only traceability.
 - Phase 1 Step 07 planning state transitions recorded in [docs/api/phase1/step-07-planning-state-transitions.md](docs/api/phase1/step-07-planning-state-transitions.md) with API and roadmap index updates to lock Draft/Validated/Frozen lifecycle semantics.
 - Phase 1 Step 06 API validation and conflict detection contract recorded in [docs/api/phase1/step-06-api-validation-and-conflict-detection.md](docs/api/phase1/step-06-api-validation-and-conflict-detection.md) with roadmap and API index updates; roadmap status set to Approved.
 - Phase 1 Step 05 API examples and test matrix approved and indexed for Phase 1 planning scope in [docs/api/phase1/step-05-api-examples-and-test-matrix.md](docs/api/phase1/step-05-api-examples-and-test-matrix.md).
