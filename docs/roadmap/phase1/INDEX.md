@@ -71,3 +71,16 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
   - Examples and tests map directly to Step 04 endpoints and schemas.
   - Decisions resolve Step 04 ambiguities without expanding features.
   - Documentation remains planning-only and Phase 1 scoped.
+
+### Step 06 - API Validation and Conflict Detection
+- [Step 06 - API Validation and Conflict Detection](../api/phase1/step-06-api-validation-and-conflict-detection.md)
+- Status: Approved — validation endpoints and conflict checks locked for planning-only scope.
+- Purpose: Define deterministic, read-only validation endpoints for planning data across organization, project, mission, and collaborator scopes.
+- Deliverables:
+  - Validation report contract with rule_version, scope metadata, blocking_errors, and warnings using deterministic sorting.
+  - Validation item structure and categories for structural, temporal, overlap, load, and rest findings with optional related entities and time ranges.
+  - Read-only validation endpoints with include/category filters and status code rules aligned to prior Phase 1 decisions, plus a validation test matrix.
+- Acceptance:
+  - Endpoints remain planning-only, deterministic, and side-effect-free while honoring organization boundaries and the established error contract.
+  - Filters and result semantics match the documented report contract without introducing execution, payroll, or contract issuance behaviors.
+  - Indexing updates register Step 06 within API and roadmap indexes for Phase 1 traceability.
