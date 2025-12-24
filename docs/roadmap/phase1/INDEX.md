@@ -98,3 +98,16 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
   - Transitions honor planning-only scope and depend on validation findings rather than auto-fixes.
   - Parent gating prevents validated or frozen children under invalid parents while avoiding automatic freeze propagation.
   - API endpoints and test matrix follow existing error and archive patterns and remain isolated from execution/payroll behaviors.
+
+### Step 08 - Planning Snapshots and Audit Trails
+- [Step 08 - Planning Snapshots and Audit Trails](../api/phase1/step-08-planning-snapshots-and-audit-trails.md)
+- Status: Approved — planning-only snapshot and audit trail contracts locked for Phase 1 traceability.
+- Purpose: Provide immutable planning snapshots and append-only audit events to enable reviews, rollback discussions, and reproducible validation without introducing restoration or execution semantics.
+- Deliverables:
+  - Snapshot scope, DTOs, deterministic content ordering, and creation/list/read endpoints with idempotency rules aligned to Step 05.
+  - Audit event DTO, allowed actions, organization scoping, and filtering rules with stable pagination semantics.
+  - Standard error handling and a test matrix covering idempotency conflicts, pagination validation, deterministic ordering, and cross-org blocks.
+- Acceptance:
+  - Snapshots are immutable, organization-scoped, and use deterministic ordering for content and listings.
+  - Audit events are append-only, organization-scoped, and filterable by entity with stable pagination and sorting.
+  - Status codes and error contracts align with Steps 04-05 while remaining planning-only and excluding restore semantics.
