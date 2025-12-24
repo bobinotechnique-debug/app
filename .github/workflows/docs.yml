@@ -1,0 +1,13 @@
+name: Docs validation (Phase 0 stub)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  stop-phase-0-docs:
+    name: Phase 0 stop - docs workflow disabled
+    if: ${{ false }} # Phase 0 guard: workflow intentionally non-executable
+    runs-on: ubuntu-latest
+    steps:
+      - name: Placeholder
+        run: echo "Docs workflow placeholder - enable after Phase 0 hardening (roadmap/phase-0/step-000.md)."

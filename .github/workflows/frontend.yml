@@ -1,0 +1,13 @@
+name: Frontend CI (Phase 0 stub)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  stop-phase-0-frontend:
+    name: Phase 0 stop - frontend workflow disabled
+    if: ${{ false }} # Phase 0 guard: workflow intentionally non-executable
+    runs-on: ubuntu-latest
+    steps:
+      - name: Placeholder
+        run: echo "Frontend CI placeholder - enable after Phase 0 hardening (roadmap/phase-0/step-000.md)."
