@@ -13,3 +13,4 @@ All notable changes are tracked here. Phase 0 entries must reference roadmap ste
 - Phase 1 step 01 expanded with explicit scope, deliverables, traceability requirements, and validation steps to enforce planning-only boundaries before implementation.
 - Phase 1 planning core initiated with roadmap activation, status updates, self-audit cues, and refreshed readiness audit highlighting remaining spec, UX, and API blockers.
 - Phase 1 Step 01 validated with roadmap and audit updates marking approval while keeping implementation blocked pending specs, UX, and API contracts.
+- Phase 1 Step 02 domain boundaries and invariants locked with roadmap indexing to anchor downstream UX, API, DB, and backend work to the planning source of truth.

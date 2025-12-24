@@ -2,4 +2,5 @@
 
 Phase 0 specs capture governance and architectural skeleton references only. Future-phase topics are out of scope.
 
-- No entries yet. Add Phase 0 specifications here as they are created.
+## Phase 1
+- [Phase 1 - Step 02: Domain Boundaries and Invariants](phase1/step-02-domain-boundaries.md)
