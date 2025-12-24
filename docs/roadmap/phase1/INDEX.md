@@ -84,3 +84,17 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
   - Endpoints remain planning-only, deterministic, and side-effect-free while honoring organization boundaries and the established error contract.
   - Filters and result semantics match the documented report contract without introducing execution, payroll, or contract issuance behaviors.
   - Indexing updates register Step 06 within API and roadmap indexes for Phase 1 traceability.
+
+### Step 07 - Planning State Transitions
+- [Step 07 - Planning State Transitions](../api/phase1/step-07-planning-state-transitions.md)
+- Status: Approved — planning lifecycle states and transitions locked for Phase 1 planning scope.
+- Purpose: Define the Draft/Validated/Frozen planning state machine with transition rules aligned to prior Phase 1 planning artifacts.
+- Deliverables:
+  - State definitions and allowed/blocked transitions with prerequisites.
+  - Parent gating rules for project/mission/assignment validation and freeze transitions.
+  - Editability and parent-freeze impact rules ensuring planning-only locking semantics.
+  - Dedicated planning_state transition endpoints plus a transition-focused test matrix.
+- Acceptance:
+  - Transitions honor planning-only scope and depend on validation findings rather than auto-fixes.
+  - Parent gating prevents validated or frozen children under invalid parents while avoiding automatic freeze propagation.
+  - API endpoints and test matrix follow existing error and archive patterns and remain isolated from execution/payroll behaviors.
