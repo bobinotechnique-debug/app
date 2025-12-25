@@ -1,7 +1,7 @@
 # Phase 1 Planning Audit (Planning-Only)
 
 ## Executive Summary
-- Status: **AMBER** — Decision **DEC-P1-LIFECYCLE-001** selects the Specs Step 12 entity-centric lifecycle as authoritative, but API Step 07 still documents the Draft/Validated/Frozen planning_state without alignment notes; audit remains open until API documentation reflects the decision and reconciliation is verified.
+- Status: **GREEN** — Decision **DEC-P1-LIFECYCLE-001** is now reflected in API Step 07 with an explicit mapping from Specs Step 12 entity lifecycles to the Draft/Validated/Frozen compatibility layer and clarified organization lifecycle handling.
 
 ## Step-by-Step Audit Table
 | Step | Title | Location | Notes |
@@ -12,7 +12,7 @@
 | 04 | API Planning Contracts | docs/api/phase1/step-04-api-planning-contracts.md | Approved. |
 | 05 | API Examples and Test Matrix | docs/api/phase1/step-05-api-examples-and-test-matrix.md | Approved. |
 | 06 | API Validation and Conflict Detection | docs/api/phase1/step-06-api-validation-and-conflict-detection.md | Approved. |
-| 07 | Planning State Transitions | docs/api/phase1/step-07-planning-state-transitions.md | Approved; uses Draft/Validated/Frozen and states organization has no lifecycle; requires alignment with DEC-P1-LIFECYCLE-001 to map planning_state to entity lifecycles. |
+| 07 | Planning State Transitions | docs/api/phase1/step-07-planning-state-transitions.md | Approved; aligns DEC-P1-LIFECYCLE-001 by deriving planning_state from Specs Step 12 entity lifecycles and documenting organization lifecycle handling via lifecycle-aware endpoints. |
 | 08 | Planning Snapshots and Audit Trails | docs/api/phase1/step-08-planning-snapshots-and-audit-trails.md | Approved. |
 | 09 | API Indexing and Cross-Doc Registration | docs/api/phase1/step-09-api-indexing-and-cross-doc-registration.md | Approved. |
 | 10 | API Error Taxonomy and Problem Details Registry | docs/api/phase1/step-10-api-error-taxonomy-and-problem-details-registry.md | Approved. |
@@ -31,7 +31,7 @@
 | 23 | Documentation Freeze, Versioning, and Change Management | docs/specs/phase1/step-23-documentation-freeze-versioning-and-change-management.md | Approved. |
 
 ## Identified Issues
-1. **Lifecycle Model Collision** — DEC-P1-LIFECYCLE-001 resolves authority in favor of Specs Step 12’s entity lifecycles (active/closed/locked/etc.), but API Step 07 still documents Draft/Validated/Frozen as the planning_state lifecycle and omits organization lifecycle handling. Alignment is required to restate API Step 07 as a compatibility view derived from the entity lifecycles and to confirm organization lifecycle coverage in API documentation.【F:docs/api/phase1/step-07-planning-state-transitions.md†L16-L140】【F:docs/specs/phase1/step-12-planning-lifecycle-and-state-transitions.md†L16-L199】
+- None. Previous lifecycle model collision resolved by aligning API Step 07 to Specs Step 12 authority.【F:docs/api/phase1/step-07-planning-state-transitions.md†L16-L149】【F:docs/specs/phase1/step-12-planning-lifecycle-and-state-transitions.md†L16-L199】
 
 ## Recommendation
-- **STOP** — Phase 1 remains blocked until API Step 07 is realigned to Specs Step 12 per DEC-P1-LIFECYCLE-001 and the audit verifies the reconciliation across all lifecycle references.
+- Proceed. Continue to reference Specs Step 12 as the lifecycle authority for future Phase 1 documentation.
