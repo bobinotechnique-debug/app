@@ -4,6 +4,7 @@ All notable changes are tracked here. Phase 0 entries must reference roadmap ste
 
 ## [Unreleased]
 ### Added
+- Phase 1 Step 23 documentation freeze, versioning, and change management governance recorded in [docs/specs/phase1/step-23-documentation-freeze-versioning-and-change-management.md](docs/specs/phase1/step-23-documentation-freeze-versioning-and-change-management.md) with roadmap and specs index updates and next authorized step advancement.
 - Phase 1 Step 22 data retention and archival policies recorded in [docs/specs/phase1/step-22-data-retention-and-archival-policies.md](docs/specs/phase1/step-22-data-retention-and-archival-policies.md) with roadmap and specs index updates advancing the next authorized step placeholder.
 - Phase 1 Step 21 observability events and audit correlation recorded in [docs/specs/phase1/step-21-observability-events-and-audit-correlation.md](docs/specs/phase1/step-21-observability-events-and-audit-correlation.md) with roadmap and specs index updates advancing the next authorized step.
 - Phase 1 Step 20 rate limits, quotas, and abuse controls recorded in [docs/specs/phase1/step-20-rate-limits-quotas-and-abuse-controls.md](docs/specs/phase1/step-20-rate-limits-quotas-and-abuse-controls.md) with roadmap and specs index updates advancing the next authorized step.
