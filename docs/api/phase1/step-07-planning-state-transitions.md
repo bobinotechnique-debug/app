@@ -1,4 +1,5 @@
 # Phase 1 - Step 07: Planning State Transitions (Draft, Validated, Frozen)
+_FROZEN by phase1_freeze_1.0.0_
 
 ## 1. Purpose and Scope
 

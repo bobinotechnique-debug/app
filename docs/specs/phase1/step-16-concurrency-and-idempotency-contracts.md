@@ -1,4 +1,5 @@
 # Phase 1 - Step 16: Concurrency and Idempotency Contracts (Planning-only)
+_FROZEN by phase1_freeze_1.0.0_
 
 ## 1. Purpose and Scope
 

@@ -1,4 +1,5 @@
 # Phase 1 - Step 01: Planning Core
+_FROZEN by phase1_freeze_1.0.0_
 
 Status: Approved — planning contract validated and recorded.
 

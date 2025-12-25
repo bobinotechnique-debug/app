@@ -1,4 +1,5 @@
 # Phase 1 - Step 04: API Planning Contracts
+_FROZEN by phase1_freeze_1.0.0_
 
 ## 1. Purpose and Scope
 - Establish the authoritative planning-only API contract for Phase 1 CRUD around organization, project, mission, assignment, and collaborator resources.

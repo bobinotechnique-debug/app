@@ -1,4 +1,5 @@
 # Phase 1 - Step 10: API Error Taxonomy and Problem Details Registry (Planning-only)
+_FROZEN by phase1_freeze_1.0.0_
 
 ## 1. Purpose and Scope
 
