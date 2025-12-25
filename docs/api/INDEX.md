@@ -15,4 +15,5 @@ Phase 0 focuses on scaffolding. Record any API surface sketches or contracts her
 - [Phase 1 - Step 10: API Error Taxonomy and Problem Details Registry](phase1/step-10-api-error-taxonomy-and-problem-details-registry.md)
 - [Phase 1 - Step 11: Authorization and Access Control (Planning-Only)](../specs/phase1/step-11-authorization-and-access-control.md)
 - [Phase 1 - Step 16: Concurrency and Idempotency Contracts (Planning-only)](../specs/phase1/step-16-concurrency-and-idempotency-contracts.md)
+- [Phase 1 - Step 17: Export and Import Contracts (Planning-only)](../specs/phase1/step-17-export-and-import-contracts.md)
 - [Phase 1 - Step 15: Query Parameters and Filtering Contracts (Planning-only)](../specs/phase1/step-15-query-parameters-and-filtering-contracts.md)
