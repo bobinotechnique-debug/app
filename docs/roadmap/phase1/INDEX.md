@@ -272,6 +272,19 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
   - Problem detail codes and fields map to the Step 10 registry with DECISION REQUIRED markers for policy thresholds.
   - Roadmap and specs indexes updated and the next authorized step advanced.
 
+### Step 21 - Observability Events and Audit Correlation (Planning-only)
+- [Step 21 - Observability Events and Audit Correlation (Planning-only)](../specs/phase1/step-21-observability-events-and-audit-correlation.md)
+- Status: Approved — planning-only observability vocabulary and correlation contracts recorded for Phase 1.
+- Purpose: Standardize event names, correlation identifier propagation, minimal event fields, and audit linkage to keep operational signals aligned to planning contracts.
+- Deliverables:
+  - Event naming conventions and optional resource subtype rules anchored to planning actions.
+  - Correlation identifier semantics for request_id, correlation_id, and trace_id plus propagation guidance and header recommendations.
+  - Minimal logging/metrics fields, error correlation to Step 10, and audit linkage including rate limiting, bulk, and import/export coverage.
+- Acceptance:
+  - Event taxonomy covers planning actions with consistent result naming and optional resource specialization.
+  - Correlation identifiers propagate per contract and align with audit trail linkages and retry/idempotency safeguards from Steps 08 and 16.
+  - Metrics vocabulary and throttling coverage align to Steps 17, 19, and 20 with DECISION REQUIRED markers called out.
+
 ### Step 22 - Data Retention and Archival Policies (Planning-only)
 - [Step 22 - Data Retention and Archival Policies (Planning-only)](../specs/phase1/step-22-data-retention-and-archival-policies.md)
 - Status: Draft — DECISION REQUIRED for retention durations, audit handling, and export obligations.
@@ -286,22 +299,19 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
   - Export obligations and error codes are aligned with Steps 10, 17, and 21.
   - Roadmap and specs indexes updated; policy decisions remain flagged as DECISION REQUIRED.
 
-## Next Authorized Step
-
-- Phase 1 - Step 23: TBD (DECISION REQUIRED for title and scope)
-### Step 21 - Observability Events and Audit Correlation (Planning-only)
-- [Step 21 - Observability Events and Audit Correlation (Planning-only)](../specs/phase1/step-21-observability-events-and-audit-correlation.md)
-- Status: Approved — planning-only observability vocabulary and correlation contracts recorded for Phase 1.
-- Purpose: Standardize event names, correlation identifier propagation, minimal event fields, and audit linkage to keep operational signals aligned to planning contracts.
+### Step 23 - Documentation Freeze, Versioning, and Change Management (Planning-only)
+- [Step 23 - Documentation Freeze, Versioning, and Change Management (Planning-only)](../specs/phase1/step-23-documentation-freeze-versioning-and-change-management.md)
+- Status: Draft — DECISION REQUIRED for freeze declaration, version selection, and amendment enforcement cadence.
+- Purpose: Define the rules for freezing Phase 1 documentation, versioning releases, classifying changes, and governing amendments without mandating tooling.
 - Deliverables:
-  - Event naming conventions and optional resource subtype rules anchored to planning actions.
-  - Correlation identifier semantics for request_id, correlation_id, and trace_id plus propagation guidance and header recommendations.
-  - Minimal logging/metrics fields, error correlation to Step 10, and audit linkage including rate limiting, bulk, and import/export coverage.
+  - Freeze declaration requirements with commit-level identification and initial version assignment.
+  - Semantic versioning guidance and change classifications covering breaking, non-breaking, and editorial updates.
+  - Amendment and deprecation policies plus backward compatibility and communication obligations.
 - Acceptance:
-  - Event taxonomy covers planning actions with consistent result naming and optional resource specialization.
-  - Correlation identifiers propagate per contract and align with audit trail linkages and retry/idempotency safeguards from Steps 08 and 16.
-  - Metrics vocabulary and throttling coverage align to Steps 17, 19, and 20 with DECISION REQUIRED markers called out.
+  - Freeze declaration prerequisites and validation checklist cover all Phase 1 steps and DECISION REQUIRED items.
+  - Change classifications map to MAJOR/MINOR/PATCH versioning with amendment documentation expectations.
+  - Roadmap and specs indexes updated; changelog and amendment index updates are required for post-freeze changes.
 
 ## Next Authorized Step
 
-- Phase 1 - Step 22: TBD (DECISION REQUIRED for title and scope)
+- Phase 1 - Step 24: TBD (DECISION REQUIRED for title and scope)
