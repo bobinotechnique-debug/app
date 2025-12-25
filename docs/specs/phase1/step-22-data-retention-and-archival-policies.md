@@ -32,7 +32,7 @@ Out of scope:
 * Step 17 export/import: exports support compliance prior to purge.
 * Step 21 observability: retention affects logs/metrics correlation windows.
 
-If retention durations or purge permissions require product/legal decisions, STOP and mark DECISION REQUIRED.
+If retention durations or purge permissions require product/legal decisions, STOP and escalate to governance before proceeding.
 
 ## 3. Definitions
 
@@ -66,19 +66,17 @@ The following categories are recognized for Phase 1:
 
 Retention durations are product policy and may vary by tenant. Phase 1 defines categories and defaults as placeholders.
 
-Recommended defaults (DECISION REQUIRED):
+Retention defaults:
 
 * Planning resources (active/archived): retain indefinitely until explicit purge is requested
-* Audit events: retain indefinitely or for a long fixed period (e.g., >= 7 years)
-* Import/export artifacts: retain for a limited period (e.g., 30-180 days)
+* Audit events: retain indefinitely
+* Import/export artifacts: retain for 90 days
 * Derived caches: ephemeral; recomputable; no retention guarantee
 * Observability data:
 
-  * logs: short-to-medium (e.g., 7-90 days)
-  * metrics: medium-to-long (e.g., 90-400 days)
-  * traces: short (e.g., 1-14 days)
-
-Exact durations must be decided by product/legal policy.
+  * logs: 30 days
+  * metrics: 180 days
+  * traces: 7 days
 
 ## 6. Archival Semantics
 
@@ -123,9 +121,7 @@ Audit events MUST NOT be purged in a way that breaks referential meaning.
 Options (policy-defined):
 
 * Retain audit events with redacted resource payloads
-* Replace purged resource references with tombstone identifiers
-
-DECISION REQUIRED for audit redaction vs tombstones.
+* Replace purged resource references with tombstone identifiers (Phase 1 default; no silent reference deletion)
 
 ### 7.4 Irreversibility
 
@@ -162,7 +158,7 @@ Before purge, the system SHOULD allow:
 * snapshot export (Step 17) of the affected scope
 * confirmation that export has completed or been offered
 
-DECISION REQUIRED: whether export is mandatory or optional before purge.
+Export is mandatory before purge; purge operations must be preceded by an offered or completed export for the affected scope.
 
 ## 10. Error Mapping (Step 10 Integration)
 
@@ -187,7 +183,7 @@ Accessing purged data SHOULD result in a not-found or gone semantics as defined 
 
 Before implementation work proceeds:
 
-* Retention categories and defaults are explicitly decided or marked DECISION REQUIRED.
+* Retention categories and defaults are explicitly decided.
 * Archival vs purge semantics are not conflated.
 * Legal hold behavior is defined and blocks purge.
 * Export obligations prior to purge are clarified.

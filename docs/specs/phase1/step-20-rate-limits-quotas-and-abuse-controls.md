@@ -37,7 +37,7 @@ Out of scope:
 * Step 16 retry/idempotency: safe retries and backoff must align.
 * Step 19 bulk semantics: bulk limits must be compatible with batch envelopes.
 
-If any limits require product policy decisions (exact numbers, tiering), STOP and mark DECISION REQUIRED.
+If any limits require product policy decisions (exact numbers, tiering), STOP and escalate to governance before proceeding.
 
 ## 3. Definitions
 
@@ -123,16 +123,14 @@ Bulk operations must be bounded to protect the system.
 
 Recommended bulk limits (policy placeholders):
 
-* max_items_per_batch: N
-* max_payload_bytes: B
+* max_items_per_batch: 100
+* max_payload_bytes: 5 MB
 * max_nested_expansions: aligns to Step 15 depth constraints
 
 Rules:
 
 * If a batch exceeds limits, the request MUST be rejected.
 * For partial mode, limits apply to the entire batch, not per item.
-
-DECISION REQUIRED for N and B.
 
 ## 7. Abuse Controls and Validation Constraints
 

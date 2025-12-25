@@ -35,7 +35,7 @@ Out of scope:
 * Step 12 lifecycle: state counts must be consistent with lifecycle semantics.
 * Step 13 conflicts: conflict summaries must match conflict taxonomy and statuses.
 
-If any derived metric requires product policy (e.g., what counts as staffed), STOP and mark DECISION REQUIRED.
+If any derived metric requires product policy (e.g., what counts as staffed), STOP and escalate to governance before proceeding.
 
 ## 3. Derived Model Conventions
 
@@ -75,11 +75,9 @@ Minimum fields:
 
 Semantics:
 
-* required_slots derives from mission staffing requirements (if declared).
+* required_slots derives from mission staffing requirements (if declared); if requirements are absent, required_slots defaults to 0.
 * filled_slots counts confirmed assignments only.
 * gap_slots = max(required_slots - filled_slots, 0).
-
-DECISION REQUIRED if staffing requirements are optional: default to 0 required slots when not provided.
 
 ### 4.2 MissionSummary
 
@@ -138,8 +136,7 @@ Semantics:
 * occupancy_ratio is a normalized measure:
   * for mission: filled_slots / max(required_slots, 1)
   * for collaborator: scheduled_minutes / bucket_minutes
-
-DECISION REQUIRED if occupancy_ratio should be clamped to 1.0 (default: clamp).
+* occupancy_ratio is clamped to a maximum of 1.0.
 
 ### 4.5 ConflictSummary
 
@@ -205,7 +202,7 @@ Derived models must not silently fabricate meaning.
 
 Rules:
 
-* If required prerequisite fields are missing (e.g., mission has no time window), derived fields dependent on them must be null and may surface a warn conflict (Step 13 invalid_time_window).
+* If required prerequisite fields are missing (e.g., mission has no time window), derived fields dependent on them must be null and may surface a warn conflict (Step 13 invalid_time_window); the derived view remains incomplete rather than failing globally.
 * If a consumer requests a derived model that cannot be computed due to invalid data, the system may respond with problem details:
   * error code: planning.derived_view_unavailable
   * include reasons in extensions (non-normative)

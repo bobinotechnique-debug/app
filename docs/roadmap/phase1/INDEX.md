@@ -138,7 +138,7 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
 - Acceptance:
   - No new error behaviors or status mappings beyond Steps 04-05 are introduced.
   - API and roadmap indexes reference this registry once with the canonical path.
-  - Future docs reuse the locked envelope and codes or raise `DECISION REQUIRED` for changes.
+  - Future docs reuse the locked envelope and codes; any change requires governance approval and a downstream phase request.
 
 ### Step 11 - Authorization and Access Control (Planning-Only)
 - [Step 11 - Authorization and Access Control (Planning-Only)](../specs/phase1/step-11-authorization-and-access-control.md)
@@ -211,7 +211,7 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
 - Purpose: Define optimistic concurrency, idempotency key usage, retry safety, and error mappings for planning CRUD and transition endpoints without prescribing storage or runtime mechanisms.
 - Deliverables:
   - Revision token and If-Match requirements for updates, transitions, and archive/unarchive actions with read-after-write token exposure.
-  - Idempotency-Key guidance for create and action-style POSTs with replay consistency rules and DECISION REQUIRED markers for TTL and non-If-Match allowances.
+  - Idempotency-Key guidance for create and action-style POSTs with replay consistency rules, 24-hour TTL, and mandatory If-Match for updates and transitions.
   - Error code alignment to Step 10 plus audit expectations linking prior and new revision tokens for traceability.
 - Acceptance:
   - Concurrency and idempotency behaviors remain planning-only, align with Steps 01-15, and do not bypass validation, authorization, or conflict blocking.
@@ -269,7 +269,7 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
 - Acceptance:
   - Rate limiting semantics, headers, and Retry-After usage are consistent with Step 16 idempotent retry guidance.
   - Quota and bulk safety limits align with Step 19 envelopes and Step 15 query rejection behaviors.
-  - Problem detail codes and fields map to the Step 10 registry with DECISION REQUIRED markers for policy thresholds.
+  - Problem detail codes and fields map to the Step 10 registry with thresholds locked for Phase 1 (100 items per batch, 5 MB payload cap).
   - Roadmap and specs indexes updated and the next authorized step advanced.
 
 ### Step 21 - Observability Events and Audit Correlation (Planning-only)
@@ -283,35 +283,35 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
 - Acceptance:
   - Event taxonomy covers planning actions with consistent result naming and optional resource specialization.
   - Correlation identifiers propagate per contract and align with audit trail linkages and retry/idempotency safeguards from Steps 08 and 16.
-  - Metrics vocabulary and throttling coverage align to Steps 17, 19, and 20 with DECISION REQUIRED markers called out.
+  - Metrics vocabulary and throttling coverage align to Steps 17, 19, and 20 with high-cardinality labels forbidden by default and audit_event_id exposed for correlation.
 
 ### Step 22 - Data Retention and Archival Policies (Planning-only)
 - [Step 22 - Data Retention and Archival Policies (Planning-only)](../specs/phase1/step-22-data-retention-and-archival-policies.md)
-- Status: Draft — DECISION REQUIRED for retention durations, audit handling, and export obligations.
+- Status: Approved — retention durations, audit handling, and export obligations locked for Phase 1.
 - Purpose: Define planning-only retention, archival, purge, and legal hold policies without mandating storage or automation.
 - Deliverables:
-  - Retention categories with placeholder durations for planning resources, audit events, import/export artifacts, derived caches, and observability data.
-  - Archival access semantics, purge eligibility safeguards, and legal hold effects aligned to lifecycle and error taxonomy steps.
+  - Retention categories with Phase 1 defaults: planning resources and audit events indefinite; import/export artifacts 90 days; logs 30 days; metrics 180 days; traces 7 days; derived caches remain ephemeral.
+  - Archival access semantics, purge eligibility safeguards, legal hold effects, and tombstone-based audit preservation aligned to lifecycle and error taxonomy steps.
   - Export expectations before purge plus validation checklist and problem detail mappings.
 - Acceptance:
-  - Retention placeholders and purge prerequisites are recorded without conflating archival and deletion semantics.
-  - Legal hold and audit integrity rules block purge unless policy-defined conditions are met.
-  - Export obligations and error codes are aligned with Steps 10, 17, and 21.
-  - Roadmap and specs indexes updated; policy decisions remain flagged as DECISION REQUIRED.
+  - Retention defaults and purge prerequisites are recorded without conflating archival and deletion semantics.
+  - Legal hold and audit integrity rules block purge unless policy-defined conditions are met, using tombstones instead of silent deletion.
+  - Export obligations and error codes are aligned with Steps 10, 17, and 21, with export required before purge.
+  - Roadmap and specs indexes updated; retention governance locked for Phase 1.
 
 ### Step 23 - Documentation Freeze, Versioning, and Change Management (Planning-only)
 - [Step 23 - Documentation Freeze, Versioning, and Change Management (Planning-only)](../specs/phase1/step-23-documentation-freeze-versioning-and-change-management.md)
-- Status: Draft — DECISION REQUIRED for freeze declaration, version selection, and amendment enforcement cadence.
+- Status: Approved — Phase 1 freeze declared with initial version 1.0.0 and governance rules locked.
 - Purpose: Define the rules for freezing Phase 1 documentation, versioning releases, classifying changes, and governing amendments without mandating tooling.
 - Deliverables:
   - Freeze declaration requirements with commit-level identification and initial version assignment.
   - Semantic versioning guidance and change classifications covering breaking, non-breaking, and editorial updates.
   - Amendment and deprecation policies plus backward compatibility and communication obligations.
 - Acceptance:
-  - Freeze declaration prerequisites and validation checklist cover all Phase 1 steps and DECISION REQUIRED items.
-  - Change classifications map to MAJOR/MINOR/PATCH versioning with amendment documentation expectations.
-  - Roadmap and specs indexes updated; changelog and amendment index updates are required for post-freeze changes.
+  - Freeze declaration prerequisites and validation checklist cover all Phase 1 steps and decision items.
+  - Change classifications map to MAJOR/MINOR/PATCH versioning with amendment documentation expectations and deprecations valid until a new MAJOR or new Phase.
+  - Roadmap and specs indexes updated; changelog and amendment index updates are required for post-freeze changes, anchored to version 1.0.0.
 
 ## Next Authorized Step
 
-- Phase 1 - Step 24: TBD (DECISION REQUIRED for title and scope)
+- Phase 1 - Step 24: TBD (title and scope to be confirmed)

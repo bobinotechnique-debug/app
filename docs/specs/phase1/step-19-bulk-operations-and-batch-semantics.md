@@ -41,7 +41,7 @@ Out of scope:
 * Step 16 concurrency and idempotency governs safe retries.
 * Step 18 external refs may be used for merge_by_key where allowed.
 
-If atomicity policy requires product decisions (e.g., default mode), STOP and mark DECISION REQUIRED.
+If atomicity policy requires product decisions (e.g., default mode), STOP and escalate to governance before proceeding.
 
 ## 3. Terminology
 
@@ -105,9 +105,7 @@ Rules:
 
 ### 6.3 Default Mode
 
-DECISION REQUIRED: default mode if mode is omitted.
-
-Recommendation: default to atomic for safety in Phase 1.
+Default mode when omitted: atomic (all-or-nothing) for safety in Phase 1.
 
 ## 7. Processing Order and Cross-Item References
 
@@ -123,9 +121,7 @@ To support create chains within one request, items MAY use:
 * temp_id: client temporary identifier
 * references within payload may use temp_id
 
-DECISION REQUIRED whether temp_id referencing is supported in Phase 1.
-
-If not supported, bulk_create must be limited to resources without intra-batch references.
+Phase 1 forbids temp_id intra-batch references; bulk_create must be limited to resources without intra-batch references.
 
 ## 8. Validation Rules
 
@@ -152,7 +148,7 @@ Additionally, the batch MUST be validated for:
 If multiple items target the same resource:
 
 * atomic mode: reject with a batch-level error unless explicitly allowed
-* partial mode: process in order but require determinism (DECISION REQUIRED)
+* partial mode: reject to preserve determinism; clients must split requests by resource
 
 ### 9.2 Idempotency
 

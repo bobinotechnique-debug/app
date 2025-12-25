@@ -32,7 +32,7 @@ Out of scope:
 - Step 10 (Errors) defines problem details; Step 12 specifies which errors apply.
 - Step 11 (Authorization) defines who may act; Step 12 defines what transitions are allowed.
 
-If any conflict requires product policy decisions (e.g., archival semantics), STOP and mark DECISION REQUIRED.
+If any conflict requires product policy decisions (e.g., archival semantics), STOP and escalate to governance before proceeding.
 
 ## 3. Lifecycle Conventions (Planning-only)
 
@@ -48,6 +48,11 @@ Phase 1 planning artifacts are not deleted. Lifecycle progression uses:
 
 - A state transition is a discrete event that must be auditable (Step 08) and attributable.
 - Terminal states are immutable: once reached, only unarchive or reopen transitions may exist if explicitly allowed.
+
+### 3.3 Unarchive and Reopen Limits
+
+- Unarchive transitions are only valid from archived.
+- Closed or canceled states may be reopened only when an explicit reopen transition is defined for that resource.
 
 ### 3.3 Consistent Terminology
 
@@ -216,6 +221,7 @@ Constraints:
 - Mission locked implies:
   - no new assignments can be created
   - existing assignments must be in terminal or stable states (confirmed or released by policy)
+  - no changes to time, scope, or staffing requirements; only non-structural metadata may be updated
 - Mission canceled implies assignments must become canceled or archived.
 
 ### 5.4 Collaborators vs Assignments

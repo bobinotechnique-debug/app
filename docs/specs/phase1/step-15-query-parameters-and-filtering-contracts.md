@@ -35,7 +35,7 @@ Out of scope:
 * Step 13 conflicts define filterable types and severities.
 * Step 14 derived models define optional expansions/selectors.
 
-If a query rule requires product policy (e.g., default sort), STOP and write DECISION REQUIRED.
+If a query rule requires product policy (e.g., default sort), STOP and escalate to governance before proceeding.
 
 ## 3. Shared Conventions
 
@@ -55,7 +55,7 @@ Unless otherwise specified:
 
 * archived items are excluded from list results
 * paging defaults to a safe limit
-* sort defaults are stable and deterministic
+* sort defaults are stable and deterministic (id ascending)
 
 Defaults are declared per resource or surface.
 
@@ -66,11 +66,11 @@ Defaults are declared per resource or surface.
 Supported parameters:
 
 * page: integer >= 1
-* page_size: integer in [1..N]
+* page_size: integer in [1..200]
 
 Constraints:
 
-* N is policy-defined; Phase 1 recommends N <= 200.
+* Phase 1 max page_size is 200.
 
 Response metadata (illustrative):
 
@@ -84,11 +84,9 @@ Response metadata (illustrative):
 If used, cursor parameters are:
 
 * cursor: opaque string
-* limit: integer in [1..N]
+* limit: integer in [1..200]
 
-Phase 1 allows either model, but a given list surface MUST pick one and remain consistent.
-
-DECISION REQUIRED if both models are offered on the same endpoint.
+Phase 1 allows either model, but a given list surface MUST pick one and remain consistent; mixing pagination models on the same endpoint is not allowed.
 
 ## 5. Sorting Contract
 
