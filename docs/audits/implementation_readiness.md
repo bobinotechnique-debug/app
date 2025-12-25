@@ -49,5 +49,23 @@ Create and document minimal guard and CI placeholders by drafting non-executable
 
 Codex Evidence
 - show_toplevel: /workspace/app
-- status_porcelain_before: 
+- status_porcelain_before:
 - top_level_ls: AGENT.md  CHANGELOG.md  PS1  README.md  agents  api  backend  docs  frontend  ops  roadmap  scripts  specs  tools  ux
+
+## Phase 2 - Step 04: Skeleton Hardening
+- Status: In Progress
+- What exists:
+  - Backend FastAPI skeleton with settings loader, health endpoints, placeholder API route, and database session manager scaffolding. 【F:backend/app/main.py†L14-L39】【F:backend/app/health.py†L12-L28】【F:backend/app/api/routes.py†L8-L22】【F:backend/app/infra/database.py†L12-L39】
+  - Frontend React/Vite skeleton with router, query client provider, and API client wrapper with tests. 【F:frontend/src/App.tsx†L1-L24】【F:frontend/src/api/client.ts†L1-L30】【F:frontend/src/api/client.test.ts†L1-L35】
+  - CI workflow stubs and guard placeholders remain from Phase 0 to keep pipelines green without execution. 【F:.github/workflows/backend.yml†L1-L12】【F:tools/guards/README.md†L1-L6】
+- What was missing:
+  - Deterministic disposal of database resources during application shutdown.
+  - Explicit readiness smoke coverage to confirm health and API routes are registered and shutdown hooks execute.
+  - Stable API client base URL resolution aligned to environment or window origin to avoid invalid URL construction.
+- What changed in Step 04:
+  - Added shutdown hook wiring and database session manager disposal/configuration helpers to keep backend infrastructure deterministic without altering responses. 【F:backend/app/main.py†L23-L29】【F:backend/app/infra/database.py†L19-L39】
+  - Added backend smoke tests to assert route registration, shutdown disposal, and database manager guard behavior. 【F:backend/tests/test_app_startup.py†L1-L34】【F:backend/tests/test_infra_database.py†L1-L23】
+  - Hardened frontend API client base URL resolution with environment and window-origin fallbacks plus coverage to keep fetch targets predictable. 【F:frontend/src/api/client.ts†L1-L30】【F:frontend/src/api/client.test.ts†L1-L35】
+- Why the changes remain behavior-free:
+  - Health and placeholder routes still return the same static payloads; updates only manage resource lifecycle and configuration defaults. Tests assert wiring, not domain logic. 【F:backend/app/health.py†L12-L28】【F:backend/tests/test_health.py†L4-L34】
+  - API client still performs GET requests but now resolves a valid base URL before constructing requests; no product flows or UI outputs were introduced. 【F:frontend/src/api/client.ts†L1-L30】

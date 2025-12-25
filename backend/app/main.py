@@ -34,6 +34,12 @@ def create_app(
     app.state.settings = resolved_settings
     app.state.db_session_manager = DatabaseSessionManager(resolved_settings.database_url)
 
+    @app.on_event("shutdown")
+    async def _shutdown_app() -> None:
+        """Ensure infrastructure resources are disposed deterministically."""
+
+        app.state.db_session_manager.dispose()
+
     health_router = create_health_router(app, dependency_check or default_dependency_check)
     app.include_router(health_router)
     app.include_router(get_api_router())
