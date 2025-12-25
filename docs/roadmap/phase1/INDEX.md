@@ -231,6 +231,19 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
   - Import semantics respect Steps 02, 12, 13, and 16 with block conflicts prevented unless payloads are corrected.
   - Roadmap and specs indexes updated and next authorized step advanced.
 
+### Step 18 - Interop Keys and External References (Planning-only)
+- [Step 18 - Interop Keys and External References (Planning-only)](../specs/phase1/step-18-interop-keys-and-external-references.md)
+- Status: Approved — planning-only external reference and interop key contracts locked for Phase 1 data linking.
+- Purpose: Standardize external identifier semantics for planning resources without delegating authority or introducing sync behavior.
+- Deliverables:
+  - External reference structure with source_system naming guidance and optional metadata fields.
+  - Uniqueness scopes, mutability recommendations, and deduplication/merge semantics tied to Step 17 merge_by_key.
+  - Query/filtering rules and error code mappings aligned to Steps 10 and 15 plus a validation checklist.
+- Acceptance:
+  - External references remain metadata honoring planning invariants and lifecycle constraints without re-parenting or authority shifts.
+  - Merge_by_key usage respects organization/project boundaries, auditability, and concurrency safeguards.
+  - Roadmap and specs indexes updated and the next authorized step advanced.
+
 ## Next Authorized Step
 
-- Phase 1 - Step 18: TBD (DECISION REQUIRED for title and scope)
+- Phase 1 - Step 19: TBD (DECISION REQUIRED for title and scope)

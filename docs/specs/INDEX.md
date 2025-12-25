@@ -11,3 +11,4 @@ Phase 0 specs capture governance and architectural skeleton references only. Fut
 - [Phase 1 - Step 15: Query Parameters and Filtering Contracts (Planning-only)](phase1/step-15-query-parameters-and-filtering-contracts.md)
 - [Phase 1 - Step 16: Concurrency and Idempotency Contracts (Planning-only)](phase1/step-16-concurrency-and-idempotency-contracts.md)
 - [Phase 1 - Step 17: Export and Import Contracts (Planning-only)](phase1/step-17-export-and-import-contracts.md)
+- [Phase 1 - Step 18: Interop Keys and External References (Planning-only)](phase1/step-18-interop-keys-and-external-references.md)
