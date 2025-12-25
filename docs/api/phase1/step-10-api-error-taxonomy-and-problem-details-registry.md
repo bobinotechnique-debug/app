@@ -9,7 +9,8 @@
 ## 2. Authority
 
 - Subordinate to Phase 1 Steps 01-09; does not supersede any previously locked contracts.
-- Bound to the Step 04 error envelope and Step 05 status-code clarifications; no new status codes or behaviors are introduced.
+- Defines the complete locked Phase 1 error code registry; the codes listed below are the allowed set for Phase 1.
+- Bound to the Step 04 error envelope and Step 05 status-code clarifications; this document consolidates the locked registry and preserves the status mappings recorded here. Any new code or status mapping change requires governance approval and a downstream phase change request.
 - Follows the indexing and cross-doc registration rules locked in Step 09 and the roadmap binding rule in AGENT.md.
 
 ## 3. Definitions
@@ -80,7 +81,7 @@
     - `planning.purge_not_allowed` → `403 Forbidden`
     - `planning.legal_hold_active` → `403 Forbidden`
     - `planning.resource_purged` → `410 Gone`
-- Keep error code namespace closed for Phase 1. Any proposal for new codes or status mappings requires governance approval and a downstream phase change request; do not invent interim codes.
+- The codes listed above are the allowed set for Phase 1. Any proposal for new codes or status mappings requires governance approval and a downstream phase change request; do not invent interim codes.
 - Preserve deterministic error structures in examples and matrices: keys sorted, codes lower_snake_case, and details mapping to stable field names.
 - Ensure every API doc that references errors links back to this registry or Step 04/05 without duplicating or diverging definitions.
 - Document traceability: when an index or spec references an error code, include a relative link to this step or the originating step (04 or 05) to prevent drift.
@@ -95,7 +96,7 @@
 
 - Scope respected: Documentation-only; no application code or runtime behavior altered.
 - Authority respected: Bound to Steps 01-09 and AGENT.md; uses Step 04/05 contracts without extension.
-- No new behavior introduced: Error codes and mappings are restated, not expanded.
+- Locked registry restated: Error codes and mappings are documented for Phase 1 without implying runtime behavior changes.
 - Indexing updated: API and roadmap indexes include this step with canonical paths.
 
 ## 7. Next Authorized Step
