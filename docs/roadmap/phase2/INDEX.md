@@ -10,9 +10,9 @@ Status: In Progress
 
 ## Step 03 - Bootstrap Skeletons
 - [Step 03 - Bootstrap Skeletons](step-03-bootstrap-skeletons.md)
-- Status: Pending
+- Status: Done
 - Purpose: Wire backend and frontend skeletons that align to the Step 02 architecture lock without adding business logic.
 - Dependencies: Must follow Step 02 architecture boundaries and Phase 1 locks.
 
 ## Next Authorized Step
-- Step 03: [Bootstrap Skeletons](step-03-bootstrap-skeletons.md)
+- Step 04: [Skeleton Hardening](step-04-skeleton-hardening.md) (Pending)
