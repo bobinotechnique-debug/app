@@ -192,6 +192,19 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
   - Conflict summaries, lifecycle counts, and staffing coverage align with Steps 10-13 without masking invalid data.
   - Roadmap and specs indexes updated with this step and next authorized step advanced.
 
+### Step 15 - Query Parameters and Filtering Contracts (Planning-only)
+- [Step 15 - Query Parameters and Filtering Contracts (Planning-only)](../specs/phase1/step-15-query-parameters-and-filtering-contracts.md)
+- Status: Approved — planning-only query semantics standardized across Phase 1 read and derived surfaces.
+- Purpose: Define shared query, filtering, sorting, pagination, include/expand, and derived view selector contracts for Phase 1 resources while aligning to conflict, lifecycle, and derived model steps.
+- Deliverables:
+  - Parameter naming conventions, defaults, and rejection rules for unknown keys.
+  - Pagination, sorting, include/expand, scope/time window, lifecycle, actor ownership, text, and conflict filter semantics with derived view selectors.
+  - Error integration mapping invalid queries to the Step 10 registry plus validation checklist binding to Steps 04, 12, 13, and 14.
+- Acceptance:
+  - Query rules reference the canonical lifecycle, conflict, and derived model taxonomies without expanding scope.
+  - Ambiguous list surfaces require explicit organization/project scope and validate time window semantics.
+  - Roadmap and specs indexes are updated and error mappings align to the Step 10 registry.
+
 ## Next Authorized Step
 
-- Phase 1 - Step 15: TBD (DECISION REQUIRED for title and scope)
+- Phase 1 - Step 16: TBD (DECISION REQUIRED for title and scope)
