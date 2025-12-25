@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "types": ["node"],
+    "target": "ES2021",
+    "resolveJsonModule": true,
+    "strict": true
+  },
+  "include": ["vite.config.ts", "vitest.config.ts", "src/**/*"]
+}
+
