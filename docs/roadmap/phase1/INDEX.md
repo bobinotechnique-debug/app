@@ -257,6 +257,21 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
   - Concurrency, conflict, and lifecycle dependencies from Steps 12, 13, and 16 are enforced per item.
   - Roadmap and specs indexes updated and the next authorized step advanced.
 
+### Step 20 - Rate Limits, Quotas, and Abuse Controls (Planning-only)
+- [Step 20 - Rate Limits, Quotas, and Abuse Controls (Planning-only)](../specs/phase1/step-20-rate-limits-quotas-and-abuse-controls.md)
+- Status: Approved — planning-only rate limiting, quota, and abuse control semantics recorded for Phase 1.
+- Purpose: Define consistent client-visible throttling semantics, quota concepts, and abuse controls without prescribing enforcement mechanisms.
+- Deliverables:
+  - 429 throttling behavior with Retry-After guidance and standardized rate limit headers.
+  - Quota model placeholders by organization/project scope and operation type with policy-defined thresholds.
+  - Bulk safety limits and payload constraints aligned to Step 19 batch envelopes and Step 15 query depth rules.
+  - Error mapping to the Step 10 registry plus retry/backoff guidance aligned to Step 16 idempotency.
+- Acceptance:
+  - Rate limiting semantics, headers, and Retry-After usage are consistent with Step 16 idempotent retry guidance.
+  - Quota and bulk safety limits align with Step 19 envelopes and Step 15 query rejection behaviors.
+  - Problem detail codes and fields map to the Step 10 registry with DECISION REQUIRED markers for policy thresholds.
+  - Roadmap and specs indexes updated and the next authorized step advanced.
+
 ## Next Authorized Step
 
-- Phase 1 - Step 20: TBD (DECISION REQUIRED for title and scope)
+- Phase 1 - Step 21: TBD (DECISION REQUIRED for title and scope)

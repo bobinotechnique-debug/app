@@ -13,3 +13,4 @@ Phase 0 specs capture governance and architectural skeleton references only. Fut
 - [Phase 1 - Step 17: Export and Import Contracts (Planning-only)](phase1/step-17-export-and-import-contracts.md)
 - [Phase 1 - Step 18: Interop Keys and External References (Planning-only)](phase1/step-18-interop-keys-and-external-references.md)
 - [Phase 1 - Step 19: Bulk Operations and Batch Semantics (Planning-only)](phase1/step-19-bulk-operations-and-batch-semantics.md)
+- [Phase 1 - Step 20: Rate Limits, Quotas, and Abuse Controls (Planning-only)](phase1/step-20-rate-limits-quotas-and-abuse-controls.md)
