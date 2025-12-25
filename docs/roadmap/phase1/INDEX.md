@@ -127,6 +127,19 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
   - Roadmap and API indexes reference the same canonical files with no duplicates or missing entries.
   - Next authorized step is recorded for controlled continuation.
 
+### Step 10 - API Error Taxonomy and Problem Details Registry
+- [Step 10 - API Error Taxonomy and Problem Details Registry](../api/phase1/step-10-api-error-taxonomy-and-problem-details-registry.md)
+- Status: Approved — planning-only consolidation of the error envelope and code namespace.
+- Purpose: Lock a Phase 1 error code registry and problem-details conventions aligned to Steps 04-05 without introducing new behaviors.
+- Deliverables:
+  - Canonical list of allowed error codes with fixed HTTP status pairings and envelope shape.
+  - Checklist to enforce deterministic error structures and cross-doc linkage to prior steps.
+  - Drift detection guidance for catching unauthorized codes or envelope changes.
+- Acceptance:
+  - No new error behaviors or status mappings beyond Steps 04-05 are introduced.
+  - API and roadmap indexes reference this registry once with the canonical path.
+  - Future docs reuse the locked envelope and codes or raise `DECISION REQUIRED` for changes.
+
 ## Next Authorized Step
 
-- Phase 1 - Step 10: TBD (DECISION REQUIRED for title and scope)
+- Phase 1 - Step 11: TBD (DECISION REQUIRED for title and scope)
