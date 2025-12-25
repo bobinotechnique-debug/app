@@ -140,6 +140,19 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
   - API and roadmap indexes reference this registry once with the canonical path.
   - Future docs reuse the locked envelope and codes or raise `DECISION REQUIRED` for changes.
 
+### Step 11 - Authorization and Access Control (Planning-Only)
+- [Step 11 - Authorization and Access Control (Planning-Only)](../specs/phase1/step-11-authorization-and-access-control.md)
+- Status: Approved — planning-only authorization roles and permissions recorded without runtime enforcement.
+- Purpose: Define declarative roles, permissions, and scopes for planning artifacts across organization and project boundaries.
+- Deliverables:
+  - Canonical planning roles with permissions and restrictions aligned to Phase 1 scope.
+  - Resource/permission matrix covering organization, project, mission, assignment, and collaborator artifacts.
+  - Authorization invariants and validation checklist consistent with Steps 01-10 and planning error taxonomy.
+- Acceptance:
+  - Roles and permissions remain planning-only with no authentication or runtime enforcement implied.
+  - Organization and project scopes are contained per Phase 1 domain boundaries.
+  - Error handling aligns to the Phase 1 problem details registry without expanding the envelope.
+
 ## Next Authorized Step
 
-- Phase 1 - Step 11: TBD (DECISION REQUIRED for title and scope)
+- Phase 1 - Step 12: TBD (DECISION REQUIRED for title and scope)

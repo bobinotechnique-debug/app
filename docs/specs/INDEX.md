@@ -4,3 +4,4 @@ Phase 0 specs capture governance and architectural skeleton references only. Fut
 
 ## Phase 1
 - [Phase 1 - Step 02: Domain Boundaries and Invariants](phase1/step-02-domain-boundaries.md)
+- [Phase 1 - Step 11: Authorization and Access Control (Planning-Only)](phase1/step-11-authorization-and-access-control.md)
