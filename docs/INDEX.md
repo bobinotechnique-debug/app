@@ -2,6 +2,7 @@
 
 Phase 0 documentation structure (locked for governance history):
 - [Roadmap](roadmap/INDEX.md)
+- [Architecture](architecture/INDEX.md)
 - [Specifications](specs/INDEX.md)
 - [API](api/INDEX.md)
 - [UX](ux/INDEX.md)
@@ -14,3 +15,4 @@ Additional audit records:
 - [Phase 1 gap map](audits/phase1_gap_map.md)
 
 All documents must remain ASCII-only. Phase 1 references are restricted to readiness and roadmap preparation; implementation requires Phase 1 roadmap and specs to be in place.
+Any deviation from locked architecture requires a DECISION doc under docs/decisions/.
