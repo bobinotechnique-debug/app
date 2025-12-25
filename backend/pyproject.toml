@@ -6,6 +6,8 @@ requires-python = ">=3.11"
 dependencies = [
   "fastapi>=0.111.0,<1.0.0",
   "uvicorn>=0.30.0,<1.0.0",
+  "pydantic-settings>=2.2.1",
+  "sqlalchemy>=2.0.29",
 ]
 
 [project.optional-dependencies]
@@ -15,7 +17,7 @@ dev = [
 ]
 
 [tool.pytest.ini_options]
-pythonpath = ["backend"]
-testpaths = ["backend/tests"]
+pythonpath = [".."]
+testpaths = ["tests"]
 addopts = "-q"
 
