@@ -1,4 +1,5 @@
 # Phase 1 - Step 20: Rate Limits, Quotas, and Abuse Controls (Planning-only)
+_FROZEN by phase1_freeze_1.0.0_
 
 ## 1. Purpose and Scope
 

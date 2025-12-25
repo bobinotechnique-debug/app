@@ -1,4 +1,5 @@
 # Phase 1 - Roadmap Index
+_FROZEN by phase1_freeze_1.0.0_
 
 Status: Approved — Phase 1 planning core validated for downstream specs.
 

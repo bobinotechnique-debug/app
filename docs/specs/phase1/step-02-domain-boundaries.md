@@ -1,4 +1,5 @@
 # Phase 1 - Step 02: Domain Boundaries and Invariants
+_FROZEN by phase1_freeze_1.0.0_
 
 ## 1. Purpose
 - Lock the Phase 1 domain boundaries now to prevent scope drift before UX, API, or implementation work begins.

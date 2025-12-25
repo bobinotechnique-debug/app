@@ -1,4 +1,5 @@
 # API Documentation Index
+_FROZEN by phase1_freeze_1.0.0_
 
 Phase 0 focuses on scaffolding. Record any API surface sketches or contracts here once defined.
 
