@@ -153,6 +153,19 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
   - Organization and project scopes are contained per Phase 1 domain boundaries.
   - Error handling aligns to the Phase 1 problem details registry without expanding the envelope.
 
+### Step 12 - Planning Lifecycle and State Transitions (Planning-Only)
+- [Step 12 - Planning Lifecycle and State Transitions (Planning-Only)](../specs/phase1/step-12-planning-lifecycle-and-state-transitions.md)
+- Status: Approved — planning lifecycle states and transitions locked for Phase 1 without runtime automation.
+- Purpose: Declare canonical lifecycle states, allowed transitions, and cross-resource constraints for planning artifacts while aligning to the planning error taxonomy.
+- Deliverables:
+  - Lifecycle state models and permitted transitions for organization, project, mission, assignment, and collaborator resources.
+  - Cross-resource transition constraints, terminal state notes, and validation expectations mapped to Step 10 error codes.
+  - Auditability requirements ensuring transitions remain traceable per Phase 1 logging contracts.
+- Acceptance:
+  - Transitions respect Phase 1 boundaries with no execution, notification, or automation semantics implied.
+  - Constraints remain consistent with Steps 01-11 and prior invariants without introducing hard deletes.
+  - Indexing and readiness criteria recorded so downstream specs and APIs can rely on locked lifecycle definitions.
+
 ## Next Authorized Step
 
-- Phase 1 - Step 12: TBD (DECISION REQUIRED for title and scope)
+- Phase 1 - Step 13: TBD (DECISION REQUIRED for title and scope)
