@@ -23,3 +23,6 @@ Status: Done
 - Each document defines boundaries and dependency rules without introducing product behavior.
 - Indexes reference Phase 2 Step 02 and the architecture documents for discoverability.
 - Any future deviation from these contracts requires a DECISION entry under docs/decisions/.
+
+## Scope Enforcement
+- This lock applies to the current repo and is enforced by CI/guards.
