@@ -272,6 +272,23 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
   - Problem detail codes and fields map to the Step 10 registry with DECISION REQUIRED markers for policy thresholds.
   - Roadmap and specs indexes updated and the next authorized step advanced.
 
+### Step 22 - Data Retention and Archival Policies (Planning-only)
+- [Step 22 - Data Retention and Archival Policies (Planning-only)](../specs/phase1/step-22-data-retention-and-archival-policies.md)
+- Status: Draft — DECISION REQUIRED for retention durations, audit handling, and export obligations.
+- Purpose: Define planning-only retention, archival, purge, and legal hold policies without mandating storage or automation.
+- Deliverables:
+  - Retention categories with placeholder durations for planning resources, audit events, import/export artifacts, derived caches, and observability data.
+  - Archival access semantics, purge eligibility safeguards, and legal hold effects aligned to lifecycle and error taxonomy steps.
+  - Export expectations before purge plus validation checklist and problem detail mappings.
+- Acceptance:
+  - Retention placeholders and purge prerequisites are recorded without conflating archival and deletion semantics.
+  - Legal hold and audit integrity rules block purge unless policy-defined conditions are met.
+  - Export obligations and error codes are aligned with Steps 10, 17, and 21.
+  - Roadmap and specs indexes updated; policy decisions remain flagged as DECISION REQUIRED.
+
+## Next Authorized Step
+
+- Phase 1 - Step 23: TBD (DECISION REQUIRED for title and scope)
 ### Step 21 - Observability Events and Audit Correlation (Planning-only)
 - [Step 21 - Observability Events and Audit Correlation (Planning-only)](../specs/phase1/step-21-observability-events-and-audit-correlation.md)
 - Status: Approved — planning-only observability vocabulary and correlation contracts recorded for Phase 1.
