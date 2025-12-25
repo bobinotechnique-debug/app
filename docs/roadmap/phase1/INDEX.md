@@ -2,7 +2,7 @@
 
 Status: Approved — Phase 1 planning core validated for downstream specs.
 
-## Steps
+## Phase 1 Core and Dependencies
 
 ### Step 01 - Planning Core
 - [Step 01 - Planning Core](step-01-planning-core.md)
@@ -31,7 +31,7 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
 - Acceptance:
   - Boundaries and invariants align with and extend Step 01 without introducing implementation detail.
   - Forbidden states and deferred concerns explicitly block out-of-scope behaviors.
-  - Dependency declaration recorded to bind UX, API, database, and backend work to this specification.
+  - Dependency declaration recorded to bind UX, API, database, and backend work to the approved contracts.
 
 ### Step 03 - UX Surface Contracts
 - [Step 03 - UX Surface Contracts](../ux/phase1/step-03-ux-surfaces.md)
@@ -45,6 +45,8 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
   - UX surfaces restrict actions to planning-only scopes with explicit forbidden behaviors.
   - Invariants and forbidden states align with Phase 1 domain boundaries and planning source-of-truth records.
   - Dependency declaration binds downstream UX, API, and implementation work to the approved contracts.
+
+## Phase 1 API Steps
 
 ### Step 04 - API Planning Contracts
 - [Step 04 - API Planning Contracts](../api/phase1/step-04-api-planning-contracts.md)
@@ -111,3 +113,20 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
   - Snapshots are immutable, organization-scoped, and use deterministic ordering for content and listings.
   - Audit events are append-only, organization-scoped, and filterable by entity with stable pagination and sorting.
   - Status codes and error contracts align with Steps 04-05 while remaining planning-only and excluding restore semantics.
+
+### Step 09 - API Indexing and Cross-Doc Registration
+- [Step 09 - API Indexing and Cross-Doc Registration](../api/phase1/step-09-api-indexing-and-cross-doc-registration.md)
+- Status: Approved — documentation-only alignment to register Phase 1 API steps across indexes.
+- Purpose: Ensure canonical indexing, cross-document registration, and navigation coherence for Phase 1 API artifacts without altering behavior contracts.
+- Deliverables:
+  - Canonical index entries for Steps 01-09 across API and roadmap navigation.
+  - Cross-document registration checklist and drift detection guidance to keep Phase 1 API paths aligned.
+  - Next authorized step pointer to continue the sequence without duplicating artifacts.
+- Acceptance:
+  - All Phase 1 API steps are indexed once with consistent titles and paths.
+  - Roadmap and API indexes reference the same canonical files with no duplicates or missing entries.
+  - Next authorized step is recorded for controlled continuation.
+
+## Next Authorized Step
+
+- Phase 1 - Step 10: TBD (DECISION REQUIRED for title and scope)
