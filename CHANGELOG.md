@@ -4,6 +4,7 @@ All notable changes are tracked here. Phase 0 entries must reference roadmap ste
 
 ## [Unreleased]
 ### Added
+- Phase 2 Step 01 bootstrap scaffolding with backend and frontend health routing smoke tests and readiness audit evidence capture.
 - API Phase 1 Step 07 planning_state documentation aligned to Specs Step 12 lifecycle authority with compatibility mapping, audit clearance, and gap map updates.
 - Phase 1 Step 23 documentation freeze, versioning, and change management governance recorded in [docs/specs/phase1/step-23-documentation-freeze-versioning-and-change-management.md](docs/specs/phase1/step-23-documentation-freeze-versioning-and-change-management.md) with roadmap and specs index updates and next authorized step advancement.
 - Phase 1 Step 22 data retention and archival policies recorded in [docs/specs/phase1/step-22-data-retention-and-archival-policies.md](docs/specs/phase1/step-22-data-retention-and-archival-policies.md) with roadmap and specs index updates advancing the next authorized step placeholder.

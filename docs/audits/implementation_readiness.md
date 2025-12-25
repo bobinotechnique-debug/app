@@ -42,3 +42,12 @@ NOT READY
 - Smoke test scaffolding is not present to validate the repository skeleton.
 6. SINGLE Next Authorized Step
 Create and document minimal guard and CI placeholders by drafting non-executable workflow stubs and corresponding guard script notes that enforce Phase 0 stop conditions without adding business logic.
+
+## Phase 2 Step 01 - Bootstrap
+- Status: IN PROGRESS
+- Next authorized step: TBD
+
+Codex Evidence
+- show_toplevel: /workspace/app
+- status_porcelain_before: 
+- top_level_ls: AGENT.md  CHANGELOG.md  PS1  README.md  agents  api  backend  docs  frontend  ops  roadmap  scripts  specs  tools  ux
