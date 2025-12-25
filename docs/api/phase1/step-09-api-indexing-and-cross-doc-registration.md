@@ -41,4 +41,4 @@ For each Phase 1 API step doc under `docs/api/phase1/`:
 
 ## 7. Next Authorized Step
 
-- Phase 1 - Step 10: TBD (DECISION REQUIRED for title and scope).
+- Phase 1 - Step 10: API Error Taxonomy and Problem Details Registry.
