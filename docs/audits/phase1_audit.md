@@ -31,7 +31,10 @@
 | 23 | Documentation Freeze, Versioning, and Change Management | docs/specs/phase1/step-23-documentation-freeze-versioning-and-change-management.md | Approved. |
 
 ## Identified Issues
-- None. Previous lifecycle model collision resolved by aligning API Step 07 to Specs Step 12 authority.【F:docs/api/phase1/step-07-planning-state-transitions.md†L16-L149】【F:docs/specs/phase1/step-12-planning-lifecycle-and-state-transitions.md†L16-L199】
+- Lifecycle authority collision between API Step 07 and Specs Step 12 resolved by DEC-P1-LIFECYCLE-001 and the API overlay alignment.【F:docs/api/phase1/step-07-planning-state-transitions.md†L1-L120】【F:docs/specs/phase1/step-12-planning-lifecycle-and-state-transitions.md†L16-L199】【F:docs/decisions/decision_phase1_lifecycle_authority.md†L1-L23】
+
+### Resolution
+- DEC-P1-LIFECYCLE-001 designates Specs Step 12 as the authoritative lifecycle source; API Step 07 now documents `planning_state` solely as a derived projection and notes organization lifecycle handling outside that overlay.【F:docs/api/phase1/step-07-planning-state-transitions.md†L1-L120】【F:docs/decisions/decision_phase1_lifecycle_authority.md†L1-L23】
 
 ## Recommendation
 - Proceed. Continue to reference Specs Step 12 as the lifecycle authority for future Phase 1 documentation.
