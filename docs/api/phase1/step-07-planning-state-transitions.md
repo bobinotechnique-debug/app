@@ -2,8 +2,8 @@
 
 ## 1. Purpose and Scope
 
-* Define the authoritative Phase 1 planning state machine and allowed transitions.
-* Ensure state transitions are consistent with:
+* Describe the API-facing `planning_state` overlay (draft, validated, frozen) as a compatibility projection derived from Specs Step 12 lifecycles.
+* Ensure transitions exposed here stay consistent with:
   * Planning-as-source-of-truth (Step 01)
   * Domain boundaries and invariants (Step 02)
   * UX surface expectations (Step 03)
@@ -13,11 +13,11 @@
 
 Planning-only: no execution, payroll, invoicing, or contract issuance semantics.
 
-**Lifecycle Authority Alignment (DEC-P1-LIFECYCLE-001)**
+## Authority (DEC-P1-LIFECYCLE-001)
 
-* Specs Step 12 is authoritative for lifecycles per entity (organization, project, mission, assignment, collaborator).
-* The `planning_state` values in this document are a compatibility overlay for API consumers and must be derived from the canonical entity lifecycles, not treated as an independent lifecycle model.
-* Organization lifecycle coverage follows Specs Step 12 (active/archived) and is **not** expressed through `planning_state` endpoints.
+* Specs Phase 1 Step 12 is authoritative for lifecycle taxonomy and transitions across all planning entities.
+* This document defines an API summary projection (`planning_state`) and does not replace or override entity lifecycles.
+* Organization lifecycle exists per Specs Step 12 (active/archived) and is surfaced through lifecycle-aware endpoints, not via `planning_state`.
 
 ## 2. Entities with Planning State
 
@@ -33,6 +33,14 @@ Notes:
 * Organization lifecycle is governed directly by Specs Step 12 (active/archived) and uses lifecycle-aware endpoints rather than `planning_state` transitions.
 * "Archived" remains a separate axis controlled by dedicated /archive endpoints per Step 05. This step does not redefine archive semantics.
 * `planning_state` is read-only with respect to Specs Step 12 authority: transitions exposed here MUST NOT contradict or bypass lifecycle constraints.
+
+### 2.1 planning_state Derivation Summary (Specs Step 12)
+
+| planning_state | Source lifecycle states (Specs Step 12) | Notes |
+| --- | --- | --- |
+| draft | draft (project, mission), proposed (assignment), invited (collaborator) | Derived when the entity is in a draft-like lifecycle state. |
+| validated | active (project, collaborator), planned (mission), confirmed/released (assignment) | Derived when the entity is in an active or planned lifecycle state. |
+| frozen | closed/archived (project), locked/canceled/archived (mission), canceled/archived (assignment), suspended/archived (collaborator) | Derived when the entity is in a locked, terminal, or archived lifecycle state. |
 
 ## 3. State Definitions
 
