@@ -4,6 +4,7 @@ All notable changes are tracked here. Phase 0 entries must reference roadmap ste
 
 ## [Unreleased]
 ### Added
+- Phase 1 Step 17 export and import contracts recorded in [docs/specs/phase1/step-17-export-and-import-contracts.md](docs/specs/phase1/step-17-export-and-import-contracts.md) with roadmap, specs, and API index updates advancing the next authorized step.
 - Phase 1 Step 16 concurrency and idempotency contracts recorded in [docs/specs/phase1/step-16-concurrency-and-idempotency-contracts.md](docs/specs/phase1/step-16-concurrency-and-idempotency-contracts.md) with roadmap, specs, and API index updates advancing the next authorized step.
 - Phase 1 Step 14 derived read models and aggregations recorded in [docs/specs/phase1/step-14-derived-read-models-and-aggregations.md](docs/specs/phase1/step-14-derived-read-models-and-aggregations.md) with roadmap and specs index updates.
 - Phase 1 Step 15 query parameters and filtering contracts recorded in [docs/specs/phase1/step-15-query-parameters-and-filtering-contracts.md](docs/specs/phase1/step-15-query-parameters-and-filtering-contracts.md) with roadmap and specs index updates.

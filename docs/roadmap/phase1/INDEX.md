@@ -218,6 +218,19 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
   - Retry guidance avoids masking validation or conflict errors and references Step 10 problem-details categories.
   - Roadmap, specs, and API indexes updated; next authorized step advanced.
 
+### Step 17 - Export and Import Contracts (Planning-only)
+- [Step 17 - Export and Import Contracts (Planning-only)](../specs/phase1/step-17-export-and-import-contracts.md)
+- Status: Approved — planning-only export/import contracts recorded for Phase 1 data mobility and validation.
+- Purpose: Define deterministic export formats and import semantics tied to snapshots, validation, conflicts, and idempotency without prescribing delivery mechanisms.
+- Deliverables:
+  - Canonical JSON export structure with optional CSV projections and manifest requirements, including snapshot attribution.
+  - Import modes, scope declarations, strategies, and idempotency guidance aligned to planning invariants, lifecycle rules, and conflict handling.
+  - Validation checklist, error code mapping, and audit/traceability notes ensuring dry-run safety and predictable apply results.
+- Acceptance:
+  - Export schemas align to Step 04 resource contracts with versioning and snapshot linkage.
+  - Import semantics respect Steps 02, 12, 13, and 16 with block conflicts prevented unless payloads are corrected.
+  - Roadmap and specs indexes updated and next authorized step advanced.
+
 ## Next Authorized Step
 
-- Phase 1 - Step 17: TBD (DECISION REQUIRED for title and scope)
+- Phase 1 - Step 18: TBD (DECISION REQUIRED for title and scope)
