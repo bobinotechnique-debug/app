@@ -1,6 +1,6 @@
 # Phase 1 - Step 23: Documentation Freeze, Versioning, and Change Management (Planning-only)
 
-Status: Draft — DECISION REQUIRED for freeze declaration and version adoption.
+Status: Approved — Phase 1 freeze declared with initial version 1.0.0.
 
 ## 1. Purpose and Scope
 
@@ -36,7 +36,7 @@ Out of scope:
 * Future phases (Phase 2+) may reference but must not silently modify Phase 1.
 * Any conflict between frozen Phase 1 docs and later docs must be resolved via explicit amendment.
 
-If change governance requires product leadership decisions, STOP and mark DECISION REQUIRED.
+If change governance requires product leadership decisions, STOP and escalate to governance before proceeding.
 
 ## 3. Phase 1 Freeze (Phase Lock)
 
@@ -46,7 +46,7 @@ Phase 1 enters frozen state when:
 
 * All required Phase 1 steps are marked COMPLETE
 * Validation checklists in each step are satisfied
-* Outstanding DECISION REQUIRED items are either resolved or explicitly deferred
+* Outstanding decision items are either resolved or explicitly deferred
 
 A freeze declaration MUST:
 
@@ -79,7 +79,7 @@ Where:
 * MINOR: backward-compatible addition or clarification
 * PATCH: editorial or non-semantic fixes
 
-Initial Phase 1 freeze version is expected to be:
+Initial Phase 1 freeze version:
 
 * 1.0.0
 
@@ -161,7 +161,7 @@ A deprecated concept MUST:
 
 ### 7.2 Deprecation Timeline
 
-Default policy (DECISION REQUIRED to adjust):
+Default policy:
 
 * Deprecated features remain valid for the remainder of the Phase
 * Removal only occurs in a new MAJOR version or new Phase
@@ -198,7 +198,7 @@ Any change after freeze MUST:
 Before declaring Phase 1 frozen:
 
 * All Phase 1 steps (01-23) exist and are COMPLETE
-* All DECISION REQUIRED items are resolved or explicitly deferred
+* All decision items are resolved or explicitly deferred
 * Phase version (e.g., 1.0.0) is assigned
 * Freeze declaration commit is identified
 * Amendment process is documented and understood

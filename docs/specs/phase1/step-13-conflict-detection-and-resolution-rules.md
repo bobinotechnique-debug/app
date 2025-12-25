@@ -36,7 +36,7 @@ Out of scope:
 * Step 11 defines who can resolve conflicts.
 * Step 12 defines lifecycle transitions that conflicts may block.
 
-If conflict rules require product policy choices, STOP and write DECISION REQUIRED.
+If conflict rules require product policy choices, STOP and escalate to governance before proceeding.
 
 ## 3. Definitions
 
@@ -87,7 +87,7 @@ Severities:
 
 * Description: A mission overlaps another mission within a rule-defined exclusivity scope (e.g., same venue, same stage).
 * Severity: warn
-* Blocks: none by default (DECISION REQUIRED if needed)
+* Blocks: none (non-blocking in Phase 1)
 
 3. assignment_outside_mission_window
 
@@ -107,8 +107,8 @@ Severities:
 
 * Description: A collaborator exceeds declared capacity within a window (hours/day, hours/week).
 * Severity: warn
-* Blocks: assignment.confirmed (if organization policy chooses strict)
-* Note: Policy strictness is product-defined; Phase 1 defaults to warn and requires explicit override to proceed.
+* Blocks: assignment.confirmed (requires explicit override to proceed)
+* Note: Warn-only by default; override_required when used to confirm assignments.
 
 6. mission_staffing_below_minimum
 
@@ -233,7 +233,8 @@ The following transitions MUST be blocked when any blocking conflicts exist in t
 Warn conflicts:
 
 * Do not block by default unless specified per conflict type.
-* If a warn conflict is marked as override-required, the transition may proceed only when an override record exists.
+* Warn conflicts never block unless explicitly marked as override_required (e.g., collaborator_capacity_exceeded when confirming assignments).
+* If a warn conflict is marked as override_required, the transition may proceed only when an override record exists.
 
 ## 8. Error Mapping (Step 10 Integration)
 

@@ -37,7 +37,7 @@ Out of scope:
 * Step 15 query filters may include external ids.
 * Step 17 import uses these semantics for merge_by_key.
 
-If any rule requires product policy (e.g., whether external keys are mutable), STOP and mark DECISION REQUIRED.
+If any rule requires product policy (e.g., whether external keys are mutable), STOP and escalate to governance before proceeding.
 
 ## 3. Core Concepts
 
@@ -103,24 +103,12 @@ An external reference tuple (source_system, external_id, external_type) MUST be 
 
 Scope rules:
 
-* for organization: unique within the organization
-* for project: unique within the organization (recommended) or within the project (DECISION REQUIRED)
-* for mission/assignment: unique within the project
-* for collaborator: unique within the organization
-
-Default recommendation:
-
-* uniqueness within organization for organization/project/collaborator
-* uniqueness within project for mission/assignment
+* organization, project, collaborator: unique within the organization
+* mission, assignment: unique within the project
 
 ### 5.2 Mutability
 
-DECISION REQUIRED: whether external references are mutable.
-
-Default recommendation:
-
-* allow add/remove external refs
-* do not allow changing an existing (source_system, external_id, external_type) tuple; instead remove + add
+External references are mutable via add/remove only; updating an existing tuple requires remove + add.
 
 ### 5.3 Deletion
 
@@ -167,11 +155,14 @@ Phase 1 does not define field-by-field merge rules for every resource. Instead, 
 
 Default merge behavior (recommended):
 
-* scalar fields: incoming overwrites existing if non-null
+* scalar fields: incoming overwrites existing if non-null unless marked merge-immutable
 * lists: replace by default (unless list elements have stable ids)
 * external_refs: union by match key
 
-DECISION REQUIRED if certain fields must never be overwritten (e.g., lifecycle_state).
+Merge-immutable fields (never overwritten by merge):
+
+* lifecycle_state
+* parent references (org_id, project_id)
 
 ### 7.2 Lifecycle Merge
 
@@ -225,7 +216,7 @@ No sync behavior is required or implied in Phase 1.
 Before implementation work proceeds:
 
 * External reference fields are optional metadata and do not change source-of-truth.
-* Uniqueness scope decisions are recorded (or marked DECISION REQUIRED).
+* Uniqueness scope decisions are recorded and traceable.
 * Import Step 17 merge_by_key references this step.
 * Query filters align with Step 15.
 * Error codes referenced here exist in Step 10 registry.

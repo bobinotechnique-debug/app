@@ -39,7 +39,7 @@ Out of scope:
 * Step 13 conflicts: imports may surface conflicts; block conflicts cannot be overridden by import.
 * Step 16 concurrency/idempotency: imports should be safe to retry.
 
-If policy decisions are required (e.g., whether import can update existing resources), STOP and mark DECISION REQUIRED.
+If policy decisions are required (e.g., whether import can update existing resources), STOP and escalate to governance before proceeding.
 
 ## 3. Export Contract
 
@@ -51,6 +51,8 @@ Supported export types:
 * delta_export (optional): changes since a snapshot or timestamp
 
 Phase 1 requires snapshot_export; delta_export is optional.
+
+Export before purge is mandatory; purge workflows must capture a snapshot_export for the affected scope first.
 
 ### 3.2 Export Scope
 
@@ -151,9 +153,8 @@ Supported strategies (policy-defined; Phase 1 declares the options):
 
 * create_only: create new resources; reject if ids already exist
 * upsert: create or update by id
-* merge_by_key (optional): match by external_key field
 
-DECISION REQUIRED: which strategies are allowed in Phase 1. Default recommendation: create_only + upsert.
+Phase 1 only allows create_only and upsert; merge_by_key is forbidden.
 
 ### 5.4 Idempotency and Safety
 
@@ -189,7 +190,7 @@ Rules:
 * warn conflicts may be imported only when they are not marked override-required, OR when an explicit override record is included and permitted.
 * info conflicts are allowed.
 
-DECISION REQUIRED if importing override records is allowed in Phase 1. Default recommendation: do not allow importing overrides; require manual override post-import.
+Importing override records is not allowed in Phase 1; overrides must be recorded manually after import where permitted.
 
 ## 8. Import Result Model
 

@@ -36,7 +36,7 @@ Out of scope:
 * Step 19 bulk semantics: batch operations require per-item correlation.
 * Step 20 rate limits: throttling events must be observable.
 
-If event semantics require product policy (e.g., which fields are PII), STOP and mark DECISION REQUIRED.
+If event semantics require product policy (e.g., which fields are PII), STOP and escalate to governance before proceeding.
 
 ## 3. Correlation Identifiers
 
@@ -151,10 +151,10 @@ Recommended labels/tags:
 * result
 * http_status
 * error_code
-* organization_id (optional, may be high-cardinality)
-* project_id (optional, may be high-cardinality)
+* organization_id (optional, forbidden by default due to high cardinality)
+* project_id (optional, forbidden by default due to high cardinality)
 
-DECISION REQUIRED: whether high-cardinality labels are permitted.
+High-cardinality metrics labels (organization_id, project_id) are forbidden by default.
 
 ## 7. Audit Correlation (Step 08 Linkage)
 
@@ -173,7 +173,7 @@ This enables linking logs/traces to authoritative planning changes.
 
 Operational logs SHOULD log the resulting audit_event_id (if available) on write success.
 
-DECISION REQUIRED: whether audit_event_id is exposed in API responses.
+Audit_event_id must be exposed in API responses to enable end-to-end correlation.
 
 ## 8. Bulk and Import/Export Correlation
 
@@ -214,9 +214,8 @@ Phase 1 requires:
 
 * avoid logging full payloads by default
 * do not log raw Idempotency-Key values
-* allow redaction of actor_id and high-cardinality scope ids
-
-DECISION REQUIRED: what fields are considered PII and must always be redacted.
+* hash or pseudonymize actor_id
+* allow redaction of high-cardinality scope ids by default
 
 ## 11. Validation Checklist
 

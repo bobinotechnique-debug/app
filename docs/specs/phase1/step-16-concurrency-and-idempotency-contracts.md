@@ -29,7 +29,7 @@ Out of scope:
 * Step 10: error taxonomy defines problem details and HTTP mapping.
 * Step 12: lifecycle transitions are writes and must be concurrency safe.
 
-If any rule requires product policy choices (e.g., which endpoints require idempotency), STOP and mark DECISION REQUIRED.
+If any rule requires product policy choices (e.g., which endpoints require idempotency), STOP and escalate to governance before proceeding.
 
 ## 3. Core Concepts
 
@@ -78,14 +78,14 @@ If ETag is not used, the revision token MUST be returned in the resource body.
 
 ### 4.2 If-Match for Writes
 
-Writes that update an existing resource SHOULD require:
+Writes that update an existing resource MUST require:
 
 * If-Match: <revision_token>
 
 Semantics:
 
 * If-Match matches current revision -> proceed with validation and apply change
-* If-Match missing -> policy-defined; Phase 1 recommends rejecting for safety
+* If-Match missing -> reject with concurrency error
 * If-Match does not match -> reject with concurrency error
 
 Applies to:
@@ -93,8 +93,6 @@ Applies to:
 * update resource (PATCH/PUT)
 * state transitions (e.g., mission planned -> locked)
 * archive/unarchive
-
-DECISION REQUIRED if some writes are allowed without If-Match.
 
 ### 4.3 Precondition Semantics
 
@@ -143,9 +141,7 @@ For an idempotent replay:
 ### 5.4 Key Scope and TTL
 
 * Key scope is per endpoint and per authenticated caller (auth out of scope, but caller identity is assumed).
-* Keys SHOULD expire after a TTL.
-
-DECISION REQUIRED for TTL duration; Phase 1 suggests 24 hours.
+* Keys expire after a 24-hour TTL.
 
 ### 5.5 Safety Constraints
 
