@@ -5,6 +5,7 @@ All notable changes are tracked here. Phase 0 entries must reference roadmap ste
 ## [Unreleased]
 ### Added
 - Phase 1 Step 14 derived read models and aggregations recorded in [docs/specs/phase1/step-14-derived-read-models-and-aggregations.md](docs/specs/phase1/step-14-derived-read-models-and-aggregations.md) with roadmap and specs index updates.
+- Phase 1 Step 15 query parameters and filtering contracts recorded in [docs/specs/phase1/step-15-query-parameters-and-filtering-contracts.md](docs/specs/phase1/step-15-query-parameters-and-filtering-contracts.md) with roadmap and specs index updates.
 - Phase 1 Step 13 conflict detection and resolution rules recorded in [docs/specs/phase1/step-13-conflict-detection-and-resolution-rules.md](docs/specs/phase1/step-13-conflict-detection-and-resolution-rules.md) with roadmap and specs index updates.
 - Phase 1 Step 12 planning lifecycle and state transitions recorded in [docs/specs/phase1/step-12-planning-lifecycle-and-state-transitions.md](docs/specs/phase1/step-12-planning-lifecycle-and-state-transitions.md) with roadmap and specs index updates.
 - Phase 1 Step 11 planning-only authorization and access control recorded in [docs/specs/phase1/step-11-authorization-and-access-control.md](docs/specs/phase1/step-11-authorization-and-access-control.md) with roadmap, specs, and API index updates.
