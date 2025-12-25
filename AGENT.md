@@ -1,6 +1,6 @@
 # AGENT.md - Codex Orchestrator & SaaS Planning System (ROOT OFFICIAL)
 
-**Version : 2.5.1 (ROOT OFFICIAL - 2026-01-13)**
+**Version : 2.6.0 (ROOT OFFICIAL - 2026-01-13)**
 **Language : ASCII only - CI/CD authoritative**
 
 ---
@@ -81,6 +81,13 @@ Organize and operate **projects** composed of **missions**, **collaborators**, a
 6. Full CI verification
 
 No silent progress is allowed.
+
+### Next Authorized Step Rule
+- Every step execution MUST end with a declaration that marks the current step as DONE or IN PROGRESS.
+- Exactly one Next Authorized Step must be stated with a concrete file path to the next step documentation and a status of Pending, Blocked, or Requires Decision.
+- Codex MUST create the next step file if it does not exist (docs-only unless implementation is explicitly authorized).
+- If more than one next step is possible, Codex MUST STOP and write DECISION REQUIRED.
+- Any step output without a Next Authorized Step declaration is invalid. This rule overrides local instructions that omit the declaration.
 
 ---
 
