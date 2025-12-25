@@ -1,4 +1,5 @@
 # Specs Index
+_FROZEN by phase1_freeze_1.0.0_
 
 Phase 0 specs capture governance and architectural skeleton references only. Future-phase topics are out of scope.
 

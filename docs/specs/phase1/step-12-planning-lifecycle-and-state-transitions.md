@@ -1,4 +1,5 @@
 # Phase 1 - Step 12: Planning Lifecycle and State Transitions (Planning-Only)
+_FROZEN by phase1_freeze_1.0.0_
 
 ## 1. Purpose and Scope
 

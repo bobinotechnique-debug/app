@@ -1,4 +1,5 @@
 # Phase 1 - Step 05: API Examples and Test Matrix
+_FROZEN by phase1_freeze_1.0.0_
 
 ## 1. Purpose and Scope
 - Convert Step 04 API planning contracts into actionable request/response examples and a minimal validation-focused test matrix.

@@ -1,4 +1,5 @@
 # Phase 1 - Step 11: Authorization and Access Control (Planning-Only)
+_FROZEN by phase1_freeze_1.0.0_
 
 ## 1. Purpose and Scope
 - Define the planning-only authorization and access control model for Phase 1 without introducing runtime enforcement or authentication.
