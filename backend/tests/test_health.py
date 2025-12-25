@@ -39,3 +39,13 @@ def test_ready_health_runs_dependency_check_when_not_testing() -> None:
     assert response.json() == {"status": "ok"}
     assert invoked["value"] is True
 
+
+def test_ready_health_allows_none_dependency_hook() -> None:
+    app = create_app(testing=False)
+    client = TestClient(app)
+
+    response = client.get("/health/ready")
+
+    assert response.status_code == 200
+    assert response.json() == {"status": "ok"}
+

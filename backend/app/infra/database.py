@@ -18,6 +18,12 @@ class DatabaseSessionManager:
         self._engine: Engine | None = create_engine(database_url) if database_url else None
         self._SessionLocal = sessionmaker(bind=self._engine) if self._engine else None
 
+    @property
+    def configured(self) -> bool:
+        """Return True when a database URL was provided."""
+
+        return self._engine is not None and self._SessionLocal is not None
+
     @contextmanager
     def session_scope(self) -> Generator[Session | None, None, None]:
         """Provide a database session scope when configured."""
@@ -31,3 +37,9 @@ class DatabaseSessionManager:
             yield session
         finally:
             session.close()
+
+    def dispose(self) -> None:
+        """Dispose engine resources deterministically when available."""
+
+        if self._engine is not None:
+            self._engine.dispose()
