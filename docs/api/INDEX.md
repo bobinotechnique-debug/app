@@ -18,3 +18,4 @@ Phase 0 focuses on scaffolding. Record any API surface sketches or contracts her
 - [Phase 1 - Step 17: Export and Import Contracts (Planning-only)](../specs/phase1/step-17-export-and-import-contracts.md)
 - [Phase 1 - Step 15: Query Parameters and Filtering Contracts (Planning-only)](../specs/phase1/step-15-query-parameters-and-filtering-contracts.md)
 - [Phase 1 - Step 18: Interop Keys and External References (Planning-only)](../specs/phase1/step-18-interop-keys-and-external-references.md)
+- [Phase 1 - Step 19: Bulk Operations and Batch Semantics (Planning-only)](../specs/phase1/step-19-bulk-operations-and-batch-semantics.md)

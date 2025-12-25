@@ -244,6 +244,19 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
   - Merge_by_key usage respects organization/project boundaries, auditability, and concurrency safeguards.
   - Roadmap and specs indexes updated and the next authorized step advanced.
 
+### Step 19 - Bulk Operations and Batch Semantics (Planning-only)
+- [Step 19 - Bulk Operations and Batch Semantics (Planning-only)](../specs/phase1/step-19-bulk-operations-and-batch-semantics.md)
+- Status: Approved — planning-only bulk and batch semantics locked for Phase 1 write operations.
+- Purpose: Standardize deterministic bulk create, update, upsert, archive, and transition semantics with explicit atomic versus partial behavior and per-item validation.
+- Deliverables:
+  - Canonical bulk request and response envelopes with item correlation ids and scope enforcement.
+  - Atomicity, processing order, temp_id, concurrency, and idempotency rules aligned to prior Phase 1 steps.
+  - Error mappings, audit expectations, and validation checklist aligned to Step 10 and related contracts.
+- Acceptance:
+  - Bulk semantics reuse Step 04 resource shapes and Step 10 error registry without adding new execution scope.
+  - Concurrency, conflict, and lifecycle dependencies from Steps 12, 13, and 16 are enforced per item.
+  - Roadmap and specs indexes updated and the next authorized step advanced.
+
 ## Next Authorized Step
 
-- Phase 1 - Step 19: TBD (DECISION REQUIRED for title and scope)
+- Phase 1 - Step 20: TBD (DECISION REQUIRED for title and scope)
