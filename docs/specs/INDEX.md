@@ -7,3 +7,4 @@ Phase 0 specs capture governance and architectural skeleton references only. Fut
 - [Phase 1 - Step 11: Authorization and Access Control (Planning-Only)](phase1/step-11-authorization-and-access-control.md)
 - [Phase 1 - Step 12: Planning Lifecycle and State Transitions (Planning-Only)](phase1/step-12-planning-lifecycle-and-state-transitions.md)
 - [Phase 1 - Step 13: Conflict Detection and Resolution Rules (Planning-only)](phase1/step-13-conflict-detection-and-resolution-rules.md)
+- [Phase 1 - Step 14: Derived Read Models and Aggregations (Planning-only)](phase1/step-14-derived-read-models-and-aggregations.md)
