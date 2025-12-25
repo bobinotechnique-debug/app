@@ -166,6 +166,19 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
   - Constraints remain consistent with Steps 01-11 and prior invariants without introducing hard deletes.
   - Indexing and readiness criteria recorded so downstream specs and APIs can rely on locked lifecycle definitions.
 
+### Step 13 - Conflict Detection and Resolution Rules (Planning-only)
+- [Step 13 - Conflict Detection and Resolution Rules (Planning-only)](../specs/phase1/step-13-conflict-detection-and-resolution-rules.md)
+- Status: Approved — planning-only conflict taxonomy, blocking rules, and resolution governance locked without automation.
+- Purpose: Define declarative conflict types, severities, and resolution/override expectations that gate planning transitions while honoring Phase 1 boundaries.
+- Deliverables:
+  - Conflict taxonomy with default severities, blocking transitions, and override allowances mapped to the Phase 1 error registry.
+  - Conflict record model with audit-ready lifecycle statuses, ownership expectations, and override requirements linked to Step 08 and Step 11 roles.
+  - Deterministic detection inputs, blocking/override semantics, and UX/API contract notes that remain planning-only and avoid solver or runtime behavior.
+- Acceptance:
+  - Conflicts remain deterministic, planning-only, and exclude optimization, scheduling automation, or runtime policy engines.
+  - Blocking and override semantics align with Step 12 transitions and Step 10 error codes; block conflicts cannot be overridden.
+  - Auditability and registry alignment recorded with roadmap and specs index registration for traceability.
+
 ## Next Authorized Step
 
-- Phase 1 - Step 13: TBD (DECISION REQUIRED for title and scope)
+- Phase 1 - Step 14: TBD (DECISION REQUIRED for title and scope)
