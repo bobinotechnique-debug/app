@@ -179,6 +179,19 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
   - Blocking and override semantics align with Step 12 transitions and Step 10 error codes; block conflicts cannot be overridden.
   - Auditability and registry alignment recorded with roadmap and specs index registration for traceability.
 
+### Step 14 - Derived Read Models and Aggregations (Planning-only)
+- [Step 14 - Derived Read Models and Aggregations (Planning-only)](../specs/phase1/step-14-derived-read-models-and-aggregations.md)
+- Status: Approved — planning-only derived summaries locked without prescribing storage or runtime implementations.
+- Purpose: Define deterministic derived read models and aggregations for planning navigation, staffing coverage, load views, and conflict rollups reproducible from snapshots.
+- Deliverables:
+  - Project, mission, collaborator load, and timeline occupancy summaries with required fields, staffing coverage semantics, and conflict summary attachment rules.
+  - Aggregation guidance for counts by lifecycle state, staffing gaps, and load/utilization views aligned to Phase 1 invariants.
+  - Snapshot attribution, error handling, and integration notes keeping derived models read-only and deterministic.
+- Acceptance:
+  - Derived models and metrics are computable solely from Phase 1 planning artifacts and reproduce from snapshots.
+  - Conflict summaries, lifecycle counts, and staffing coverage align with Steps 10-13 without masking invalid data.
+  - Roadmap and specs indexes updated with this step and next authorized step advanced.
+
 ## Next Authorized Step
 
-- Phase 1 - Step 14: TBD (DECISION REQUIRED for title and scope)
+- Phase 1 - Step 15: TBD (DECISION REQUIRED for title and scope)
