@@ -9,3 +9,4 @@ Phase 0 specs capture governance and architectural skeleton references only. Fut
 - [Phase 1 - Step 13: Conflict Detection and Resolution Rules (Planning-only)](phase1/step-13-conflict-detection-and-resolution-rules.md)
 - [Phase 1 - Step 14: Derived Read Models and Aggregations (Planning-only)](phase1/step-14-derived-read-models-and-aggregations.md)
 - [Phase 1 - Step 15: Query Parameters and Filtering Contracts (Planning-only)](phase1/step-15-query-parameters-and-filtering-contracts.md)
+- [Phase 1 - Step 16: Concurrency and Idempotency Contracts (Planning-only)](phase1/step-16-concurrency-and-idempotency-contracts.md)

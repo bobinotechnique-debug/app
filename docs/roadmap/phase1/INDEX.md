@@ -205,6 +205,19 @@ Status: Approved — Phase 1 planning core validated for downstream specs.
   - Ambiguous list surfaces require explicit organization/project scope and validate time window semantics.
   - Roadmap and specs indexes are updated and error mappings align to the Step 10 registry.
 
+### Step 16 - Concurrency and Idempotency Contracts (Planning-only)
+- [Step 16 - Concurrency and Idempotency Contracts (Planning-only)](../specs/phase1/step-16-concurrency-and-idempotency-contracts.md)
+- Status: Approved — planning-only concurrency control and idempotency contracts recorded for Phase 1 writes.
+- Purpose: Define optimistic concurrency, idempotency key usage, retry safety, and error mappings for planning CRUD and transition endpoints without prescribing storage or runtime mechanisms.
+- Deliverables:
+  - Revision token and If-Match requirements for updates, transitions, and archive/unarchive actions with read-after-write token exposure.
+  - Idempotency-Key guidance for create and action-style POSTs with replay consistency rules and DECISION REQUIRED markers for TTL and non-If-Match allowances.
+  - Error code alignment to Step 10 plus audit expectations linking prior and new revision tokens for traceability.
+- Acceptance:
+  - Concurrency and idempotency behaviors remain planning-only, align with Steps 01-15, and do not bypass validation, authorization, or conflict blocking.
+  - Retry guidance avoids masking validation or conflict errors and references Step 10 problem-details categories.
+  - Roadmap, specs, and API indexes updated; next authorized step advanced.
+
 ## Next Authorized Step
 
-- Phase 1 - Step 16: TBD (DECISION REQUIRED for title and scope)
+- Phase 1 - Step 17: TBD (DECISION REQUIRED for title and scope)
