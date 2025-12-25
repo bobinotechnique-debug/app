@@ -13,9 +13,15 @@
 
 Planning-only: no execution, payroll, invoicing, or contract issuance semantics.
 
+**Lifecycle Authority Alignment (DEC-P1-LIFECYCLE-001)**
+
+* Specs Step 12 is authoritative for lifecycles per entity (organization, project, mission, assignment, collaborator).
+* The `planning_state` values in this document are a compatibility overlay for API consumers and must be derived from the canonical entity lifecycles, not treated as an independent lifecycle model.
+* Organization lifecycle coverage follows Specs Step 12 (active/archived) and is **not** expressed through `planning_state` endpoints.
+
 ## 2. Entities with Planning State
 
-Phase 1 planning state applies to:
+Phase 1 planning state applies to the following entities as a derived view over their canonical lifecycles:
 
 * Project
 * Mission
@@ -24,8 +30,9 @@ Phase 1 planning state applies to:
 
 Notes:
 
-* Organization does not have a planning lifecycle state in Phase 1.
+* Organization lifecycle is governed directly by Specs Step 12 (active/archived) and uses lifecycle-aware endpoints rather than `planning_state` transitions.
 * "Archived" remains a separate axis controlled by dedicated /archive endpoints per Step 05. This step does not redefine archive semantics.
+* `planning_state` is read-only with respect to Specs Step 12 authority: transitions exposed here MUST NOT contradict or bypass lifecycle constraints.
 
 ## 3. State Definitions
 
@@ -113,7 +120,7 @@ Rationale:
 
 * DRAFT: editable (subject to base immutability rules and archived rules).
 * VALIDATED: editable, but edits SHOULD trigger re-validation in UX flows.
-* FROZEN: not editable, except via explicit unfreeze (FROZEN -> VALIDATED).
+* FROZEN: not editable, except via explicit unfreeze (FROZEN -> VALIDATED) and subject to lifecycle limits in Specs Step 12.
 
 ### 6.2 Parent Freeze Impact
 
@@ -137,6 +144,27 @@ Base path: /api/phase1
 
 * State is returned on all relevant DTOs as `planning_state`.
 * planning_state is one of: draft, validated, frozen.
+* planning_state values are derived from canonical lifecycle states defined in Specs Step 12 and serve as a compatibility layer for Phase 1 API consumers.
+
+#### 7.1.1 planning_state Derivation from Entity Lifecycles (Specs Step 12)
+
+| Entity | Lifecycle states (Specs Step 12) | Derived planning_state | Notes |
+| --- | --- | --- | --- |
+| Organization | active, archived | _n/a_ | Organization lifecycle is surfaced through lifecycle-aware endpoints; `planning_state` is not emitted. |
+| Project | draft | draft | Pre-activation planning; not yet validated. |
+| Project | active | validated | Active planning with validated scope. |
+| Project | closed, archived | frozen | Planning is locked; unarchive or reopen drives changes to lifecycle before planning_state can move. |
+| Mission | draft | draft | Mission not yet planned. |
+| Mission | planned | validated | Planned and ready for validation-bound editing. |
+| Mission | locked, canceled, archived | frozen | Locked or terminal mission states expose `planning_state=frozen`; cancel/archive do not bypass lock semantics. |
+| Assignment | proposed | draft | Draft commitment pending validation. |
+| Assignment | confirmed, released | validated | Confirmed or released commitments remain editable within validation rules. |
+| Assignment | canceled, archived | frozen | Terminal or archived assignments surface as frozen. |
+| Collaborator | invited | draft | Pending onboarding. |
+| Collaborator | active | validated | Active collaborator eligible for assignments. |
+| Collaborator | suspended, archived | frozen | Suspended/archived collaborators block new assignments and surface as frozen. |
+
+API implementations MUST evaluate lifecycle transitions first; `planning_state` transitions are allowed only when they do not conflict with the lifecycle state machine or constraints defined in Specs Step 12.
 
 ### 7.2 Transition Endpoints
 
