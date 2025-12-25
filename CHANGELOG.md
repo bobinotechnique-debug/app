@@ -4,6 +4,7 @@ All notable changes are tracked here. Phase 0 entries must reference roadmap ste
 
 ## [Unreleased]
 ### Added
+- Phase 1 Step 22 data retention and archival policies recorded in [docs/specs/phase1/step-22-data-retention-and-archival-policies.md](docs/specs/phase1/step-22-data-retention-and-archival-policies.md) with roadmap and specs index updates advancing the next authorized step placeholder.
 - Phase 1 Step 20 rate limits, quotas, and abuse controls recorded in [docs/specs/phase1/step-20-rate-limits-quotas-and-abuse-controls.md](docs/specs/phase1/step-20-rate-limits-quotas-and-abuse-controls.md) with roadmap and specs index updates advancing the next authorized step.
 - Phase 1 Step 19 bulk operations and batch semantics recorded in [docs/specs/phase1/step-19-bulk-operations-and-batch-semantics.md](docs/specs/phase1/step-19-bulk-operations-and-batch-semantics.md) with roadmap, specs, and API index updates advancing the next authorized step.
 - Phase 1 Step 18 interop keys and external reference contracts recorded in [docs/specs/phase1/step-18-interop-keys-and-external-references.md](docs/specs/phase1/step-18-interop-keys-and-external-references.md) with roadmap, specs, and API index updates advancing the next authorized step.
