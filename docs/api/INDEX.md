@@ -13,3 +13,4 @@ Phase 0 focuses on scaffolding. Record any API surface sketches or contracts her
 - [Phase 1 - Step 08: Planning Snapshots and Audit Trails](phase1/step-08-planning-snapshots-and-audit-trails.md)
 - [Phase 1 - Step 09: API Indexing and Cross-Doc Registration](phase1/step-09-api-indexing-and-cross-doc-registration.md)
 - [Phase 1 - Step 10: API Error Taxonomy and Problem Details Registry](phase1/step-10-api-error-taxonomy-and-problem-details-registry.md)
+- [Phase 1 - Step 11: Authorization and Access Control (Planning-Only)](../specs/phase1/step-11-authorization-and-access-control.md)
